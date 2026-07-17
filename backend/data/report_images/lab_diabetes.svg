@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#fafafa"/>
+  <text x="20" y="30" fill="#2c3e50" font-family="sans-serif" font-size="16" font-weight="bold">LABORATORY REPORT  BIOCHEMISTRY</text>
+  <text x="20" y="55" fill="#7f8c8d" font-family="sans-serif" font-size="12">Patient: Nasreen Akter | Fasting Sample</text>
+  <line x1="20" y1="65" x2="580" y2="65" stroke="#bdc3c7"/>
+  <text x="30" y="95" fill="#333" font-family="monospace" font-size="13">Fasting Blood Glucose</text>
+  <text x="350" y="95" fill="#c0392b" font-family="monospace" font-size="14" font-weight="bold">248 mg/dL</text>
+  <text x="480" y="95" fill="#999" font-family="monospace" font-size="12">(70-100)</text>
+  <text x="30" y="130" fill="#333" font-family="monospace" font-size="13">HbA1c</text>
+  <text x="350" y="130" fill="#c0392b" font-family="monospace" font-size="14" font-weight="bold">9.1%</text>
+  <text x="480" y="130" fill="#999" font-family="monospace" font-size="12">(&lt;5.7%)</text>
+  <text x="30" y="165" fill="#333" font-family="monospace" font-size="13">Random Glucose</text>
+  <text x="350" y="165" fill="#c0392b" font-family="monospace" font-size="14" font-weight="bold">310 mg/dL</text>
+  <text x="30" y="200" fill="#333" font-family="monospace" font-size="13">Total Cholesterol</text>
+  <text x="350" y="200" fill="#e67e22" font-family="monospace" font-size="13">245 mg/dL</text>
+  <text x="30" y="235" fill="#333" font-family="monospace" font-size="13">Triglycerides</text>
+  <text x="350" y="235" fill="#e67e22" font-family="monospace" font-size="13">198 mg/dL</text>
+  <rect x="20" y="270" width="560" height="60" fill="#fdecea" rx="5"/>
+  <text x="30" y="295" fill="#c0392b" font-family="sans-serif" font-size="13" font-weight="bold">DIAGNOSIS: Uncontrolled Type 2 Diabetes Mellitus</text>
+  <text x="30" y="318" fill="#666" font-family="sans-serif" font-size="11">Recommend: HbA1c monitoring, dietary counseling, metformin initiation</text>
+</svg>

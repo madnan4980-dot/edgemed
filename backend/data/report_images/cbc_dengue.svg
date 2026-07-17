@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f5f5f0"/>
+  <text x="20" y="30" fill="#333" font-family="sans-serif" font-size="16" font-weight="bold">COMPLETE BLOOD COUNT (CBC)</text>
+  <text x="20" y="55" fill="#666" font-family="sans-serif" font-size="12">Patient: Fatima Begum | Lab: Dhaka Medical</text>
+  <rect x="20" y="70" width="560" height="25" fill="#2c5f8a"/>
+  <text x="30" y="88" fill="white" font-family="sans-serif" font-size="12">Parameter</text>
+  <text x="250" y="88" fill="white" font-family="sans-serif" font-size="12">Result</text>
+  <text x="400" y="88" fill="white" font-family="sans-serif" font-size="12">Reference</text>
+  <text x="500" y="88" fill="white" font-family="sans-serif" font-size="12">Flag</text>
+  <text x="30" y="120" fill="#333" font-family="monospace" font-size="13">WBC</text><text x="250" y="120" fill="#333" font-family="monospace" font-size="13">4.2 x10�/�L</text><text x="400" y="120" fill="#666" font-family="monospace" font-size="13">4.0-11.0</text>
+  <text x="30" y="150" fill="#333" font-family="monospace" font-size="13">RBC</text><text x="250" y="150" fill="#333" font-family="monospace" font-size="13">4.8 x10v/�L</text><text x="400" y="150" fill="#666" font-family="monospace" font-size="13">4.2-5.4</text>
+  <text x="30" y="180" fill="#c0392b" font-family="monospace" font-size="13" font-weight="bold">Platelet</text><text x="250" y="180" fill="#c0392b" font-family="monospace" font-size="13" font-weight="bold">95,000/�L</text><text x="400" y="180" fill="#666" font-family="monospace" font-size="13">150K-400K</text><text x="500" y="180" fill="#c0392b" font-family="sans-serif" font-size="13" font-weight="bold">LOW</text>
+  <text x="30" y="210" fill="#e67e22" font-family="monospace" font-size="13" font-weight="bold">Hematocrit</text><text x="250" y="210" fill="#e67e22" font-family="monospace" font-size="13" font-weight="bold">48%</text><text x="400" y="210" fill="#666" font-family="monospace" font-size="13">36-46%</text><text x="500" y="210" fill="#e67e22" font-family="sans-serif" font-size="13" font-weight="bold">HIGH</text>
+  <text x="30" y="240" fill="#c0392b" font-family="monospace" font-size="13" font-weight="bold">NS1 Antigen</text><text x="250" y="240" fill="#c0392b" font-family="monospace" font-size="13" font-weight="bold">POSITIVE</text><text x="400" y="240" fill="#666" font-family="monospace" font-size="13">Negative</text><text x="500" y="240" fill="#c0392b" font-family="sans-serif" font-size="13" font-weight="bold">POS</text>
+  <text x="20" y="370" fill="#c0392b" font-family="sans-serif" font-size="13" font-weight="bold">Impression: Findings consistent with Dengue Fever</text>
+</svg>

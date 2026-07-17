@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#1a1a2e"/>
+  <text x="20" y="30" fill="#e94560" font-family="monospace" font-size="16" font-weight="bold">ECG REPORT  ABNORMAL</text>
+  <text x="20" y="55" fill="#aaa" font-family="sans-serif" font-size="12">Patient: Rahim Ahmed | Date: 2026-07-14</text>
+  <polyline points="20,200 40,180 60,220 80,160 100,240 120,150 140,230 160,170 180,210 200,140 220,250 240,160 260,220 280,150 300,240 320,170 340,210 360,160 380,230 400,180 420,200 440,190 460,210 480,185 500,205 520,195 540,200 560,198 580,200" fill="none" stroke="#00ff88" stroke-width="2"/>
+  <polyline points="20,300 40,290 60,310 80,280 100,320 120,270 140,330 160,285 180,315 200,275 220,325 240,280 260,310 280,275 300,320 320,285 340,315 360,280 380,325 400,290 420,305 440,295 460,310 480,290 500,305 520,295 540,300 560,298 580,300" fill="none" stroke="#ffcc00" stroke-width="1.5"/>
+  <text x="20" y="370" fill="#ff6b6b" font-family="sans-serif" font-size="13">Finding: ST depression in leads V4-V6, T wave inversion</text>
+  <text x="20" y="390" fill="#aaa" font-family="sans-serif" font-size="11">Impression: Ischemic changes  recommend troponin, cardiology consult</text>
+</svg>

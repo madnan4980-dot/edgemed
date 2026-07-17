@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3f5f"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d5a80"/>
+      <stop offset="100%" stop-color="#293241"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="550" fill="url(#wall)"/>
+  <rect y="550" width="1200" height="250" fill="url(#floor)"/>
+  <!-- Window -->
+  <rect x="80" y="80" width="200" height="160" rx="4" fill="#87CEEB" opacity="0.3"/>
+  <rect x="80" y="80" width="200" height="160" rx="4" fill="none" stroke="#5a7a9a" stroke-width="4"/>
+  <line x1="180" y1="80" x2="180" y2="240" stroke="#5a7a9a" stroke-width="3"/>
+  <line x1="80" y1="160" x2="280" y2="160" stroke="#5a7a9a" stroke-width="3"/>
+  <!-- Bookshelf -->
+  <rect x="900" y="60" width="250" height="300" fill="#4a3728" rx="4"/>
+  <rect x="910" y="70" width="230" height="8" fill="#6b4c3b"/>
+  <rect x="910" y="140" width="230" height="8" fill="#6b4c3b"/>
+  <rect x="910" y="210" width="230" height="8" fill="#6b4c3b"/>
+  <rect x="915" y="80" width="30" height="55" fill="#c0392b" rx="2"/>
+  <rect x="950" y="82" width="25" height="53" fill="#2980b9" rx="2"/>
+  <rect x="980" y="85" width="35" height="50" fill="#27ae60" rx="2"/>
+  <rect x="1020" y="78" width="28" height="57" fill="#8e44ad" rx="2"/>
+  <rect x="915" y="150" width="40" height="55" fill="#e67e22" rx="2"/>
+  <rect x="960" y="148" width="32" height="57" fill="#1abc9c" rx="2"/>
+  <!-- Desk -->
+  <rect x="350" y="480" width="500" height="20" fill="#5d4e37" rx="2"/>
+  <rect x="370" y="500" width="15" height="50" fill="#4a3728"/>
+  <rect x="815" y="500" width="15" height="50" fill="#4a3728"/>
+  <!-- Stethoscope on desk -->
+  <circle cx="500" cy="475" r="12" fill="none" stroke="#silver" stroke-width="3"/>
+  <path d="M512,475 Q540,460 560,475" fill="none" stroke="#aaa" stroke-width="3"/>
+  <!-- Chair -->
+  <rect x="480" y="530" width="120" height="15" fill="#2c3e50" rx="4"/>
+  <rect x="500" y="420" width="80" height="115" fill="#34495e" rx="6"/>
+  <!-- Medical chart on wall -->
+  <rect x="450" y="100" width="300" height="200" fill="#ecf0f1" rx="4" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="470" y="130" fill="#2c3e50" font-family="sans-serif" font-size="14" font-weight="bold">ANATOMY CHART</text>
+  <ellipse cx="600" cy="210" rx="60" ry="70" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="600" y1="140" x2="600" y2="280" stroke="#3498db" stroke-width="1.5"/>
+  <!-- Lamp -->
+  <rect x="700" y="300" width="8" height="180" fill="#7f8c8d"/>
+  <polygon points="680,300 728,300 704,270" fill="#f39c12"/>
+  <ellipse cx="704" cy="310" rx="30" ry="10" fill="#f1c40f" opacity="0.4"/>
+  <!-- EdgeMed sign -->
+  <rect x="480" y="30" width="240" height="40" rx="8" fill="#14b8a6" opacity="0.8"/>
+  <text x="600" y="57" fill="white" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">EdgeMed Chamber</text>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "",
+            "thought": true
+          },
+          {
+            "text": "To Whom It May Concern,\n\nI’m writing this because I’m honestly just really scared and I don’t know what else to do. I’ve never felt anything like this before, and even though I’m sitting down right now, I can’t shake this feeling that something is just… wrong.\n\nIt started about two hours ago while I was just sitting on the couch watching TV. It isn't a sharp pain, like if I poked myself with something, but more like this heavy, crushing weight right in the middle of my chest. It feels like there’s a giant stone sitting on my ribs, and every time I try to take a deep breath, it just feels tight and shallow. It’s hard to even explain—it’s not \"hurting\" in a way that makes me want to jump around, but it’s just this constant, dull pressure that won't go away.\n\nI tried to ignore it at first, thinking maybe it was just indigestion or something I ate for lunch, so I took some antacids. But it didn't help at all. In fact, it’s kind of spreading. I can feel this weird tightness moving up toward my neck and down my left arm, almost like a dull ache that travels. It’s making me feel really shaky and nauseous, too. I feel cold and clammy, even though the house is warm.\n\nI’ve been trying to stay calm, but my heart feels like it’s racing for no reason, and it’s making me feel incredibly anxious. I can't focus on anything else. I keep thinking about my family and wondering if this is what people mean when they talk about a heart attack. I’m not a doctor, and I know I might be overreacting, but this feeling is so heavy and overwhelming.\n\nI don't know if I should wait it out or if I need to go to the ER right now, but I feel like I can’t catch my breath properly and the pressure is just getting more intense. Please, I just need to know if this is serious or if I’m just having a panic attack. I feel very unwell and very frightened.\n\nSincerely,\n\n[Patient Name]"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 21,
+    "candidatesTokenCount": 466,
+    "totalTokenCount": 487,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemma-4-26b-a4b-it",
+  "responseId": "v4BXaoezE6XQjuMPlqTg8AI"
+}

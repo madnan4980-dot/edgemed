@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 260" width="180" height="260">
+  <!-- Patient avatar - generic -->
+  <ellipse cx="90" cy="55" rx="38" ry="42" fill="#D4A574"/>
+  <!-- Hair -->
+  <ellipse cx="90" cy="30" rx="40" ry="25" fill="#3D2314"/>
+  <!-- Neck -->
+  <rect x="75" y="90" width="30" height="20" fill="#D4A574"/>
+  <!-- Body / clothes -->
+  <path d="M40,115 Q90,105 140,115 L150,250 L30,250 Z" fill="#4A90D9"/>
+  <!-- Collar -->
+  <path d="M65,110 L90,125 L115,110" fill="none" stroke="#3A7BC8" stroke-width="2"/>
+  <!-- Eyes -->
+  <ellipse cx="75" cy="55" rx="5" ry="6" fill="white"/>
+  <ellipse cx="105" cy="55" rx="5" ry="6" fill="white"/>
+  <circle cx="76" cy="56" r="3" fill="#2C1810"/>
+  <circle cx="106" cy="56" r="3" fill="#2C1810"/>
+  <!-- Nose -->
+  <line x1="90" y1="60" x2="88" y2="70" stroke="#B8895A" stroke-width="2"/>
+  <!-- Mouth -->
+  <path d="M80,78 Q90,84 100,78" fill="none" stroke="#A07050" stroke-width="2"/>
+  <!-- Arms -->
+  <path d="M40,120 Q20,160 30,200" fill="none" stroke="#4A90D9" stroke-width="18" stroke-linecap="round"/>
+  <path d="M140,120 Q160,160 150,200" fill="none" stroke="#4A90D9" stroke-width="18" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="30" cy="205" r="10" fill="#D4A574"/>
+  <circle cx="150" cy="205" r="10" fill="#D4A574"/>
+</svg>

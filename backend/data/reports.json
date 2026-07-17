@@ -1,0 +1,73 @@
+[
+  {
+    "case_id": "case_001",
+    "image": "pneumonia/00001162_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+
+    "patient": {
+      "id": "P-1042",
+      "age": 54,
+      "gender": "Male"
+    },
+
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for 3 days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and right-sided pleuritic chest pain over the past 3 days. No hemoptysis.",
+      "past_medical_history": ["Type 2 diabetes", "Hypertension"],
+      "medications": ["Metformin", "Amlodipine"],
+      "allergies": ["NKDA"]
+    },
+
+    "vitals": {
+      "temperature_c": 38.6,
+      "heart_rate": 104,
+      "respiratory_rate": 22,
+      "blood_pressure": "128/82",
+      "spo2": 93
+    },
+
+    "physical_exam": "Decreased breath sounds and crackles at the right lower lung base. No wheeze. No peripheral edema.",
+    "lab_results": "WBC 14.2 x10^9/L, CRP 88 mg/L",
+
+    "learning_objectives": [
+      "Identify a lobar consolidation on a PA chest film",
+      "Correlate radiographic findings with vitals and exam",
+      "Formulate an appropriate outpatient vs inpatient management plan"
+    ],
+
+    "expected_findings": [
+      "Right lower lobe consolidation",
+      "Air bronchograms within the consolidation",
+      "No significant pleural effusion"
+    ],
+
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+
+    "common_mistakes": [
+      "Mistaking the consolidation for a mass due to its rounded margin",
+      "Overlooking air bronchograms",
+      "Failing to correlate fever/WBC with the imaging finding"
+    ],
+
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass",
+      "Lobar consolidation + fever + productive cough = classic CAP presentation"
+    ],
+
+    "followup_questions": [
+      "What CURB-65 score would you assign, and does it change your admission decision?"
+    ],
+
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia (right lower lobe)",
+      "severity": "Moderate",
+      "key_findings": ["Right lower lobe consolidation", "Air bronchograms"]
+    }
+  }
+]

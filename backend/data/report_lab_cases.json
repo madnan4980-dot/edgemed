@@ -1,0 +1,6257 @@
+[
+  {
+    "case_id": "case_001",
+    "image": "atelectasis/00004463_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2383",
+      "age": 42,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.0,
+      "heart_rate": 86,
+      "respiratory_rate": 20,
+      "blood_pressure": "125/77",
+      "spo2": 96
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_002",
+    "image": "atelectasis/00010017_003.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-6677",
+      "age": 31,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.0,
+      "heart_rate": 95,
+      "respiratory_rate": 20,
+      "blood_pressure": "145/85",
+      "spo2": 96
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_003",
+    "image": "atelectasis/00012520_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-1908",
+      "age": 39,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.7,
+      "heart_rate": 95,
+      "respiratory_rate": 23,
+      "blood_pressure": "138/84",
+      "spo2": 91
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_004",
+    "image": "atelectasis/00014196_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-5715",
+      "age": 54,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.8,
+      "heart_rate": 87,
+      "respiratory_rate": 22,
+      "blood_pressure": "135/70",
+      "spo2": 92
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_005",
+    "image": "atelectasis/00014197_025.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-4469",
+      "age": 61,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.8,
+      "heart_rate": 100,
+      "respiratory_rate": 18,
+      "blood_pressure": "122/70",
+      "spo2": 94
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_006",
+    "image": "atelectasis/00016130_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-4954",
+      "age": 43,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.5,
+      "heart_rate": 95,
+      "respiratory_rate": 20,
+      "blood_pressure": "126/75",
+      "spo2": 96
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_007",
+    "image": "atelectasis/00016937_015.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-7631",
+      "age": 43,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.6,
+      "heart_rate": 90,
+      "respiratory_rate": 18,
+      "blood_pressure": "145/80",
+      "spo2": 96
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_008",
+    "image": "atelectasis/00019205_001.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-9585",
+      "age": 30,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.1,
+      "heart_rate": 91,
+      "respiratory_rate": 21,
+      "blood_pressure": "115/80",
+      "spo2": 93
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_009",
+    "image": "atelectasis/00030106_009.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-5471",
+      "age": 25,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.8,
+      "heart_rate": 89,
+      "respiratory_rate": 21,
+      "blood_pressure": "121/70",
+      "spo2": 91
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_010",
+    "image": "atelectasis/00030689_003.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-9862",
+      "age": 61,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Post-operative shortness of breath",
+      "history_of_present_illness": "Two days post-abdominal surgery, now with mild breathlessness and shallow breathing due to pain.",
+      "past_medical_history": [
+        "Recent abdominal surgery"
+      ],
+      "medications": [
+        "Post-op analgesia"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.5,
+      "heart_rate": 92,
+      "respiratory_rate": 22,
+      "blood_pressure": "143/81",
+      "spo2": 95
+    },
+    "physical_exam": "Reduced breath sounds at the base, shallow breathing due to incisional pain.",
+    "lab_results": "Unremarkable.",
+    "learning_objectives": [
+      "Recognize volume loss and shift of structures toward the affected side",
+      "Understand atelectasis as a common post-operative finding"
+    ],
+    "expected_findings": [
+      "Volume loss",
+      "Tracheal or mediastinal shift toward the affected side"
+    ],
+    "differential_diagnoses": [
+      "Post-operative atelectasis",
+      "Mucus plugging",
+      "Early pneumonia"
+    ],
+    "common_mistakes": [
+      "Confusing atelectasis with consolidation"
+    ],
+    "teaching_points": [
+      "Atelectasis pulls structures toward it; effusion and mass tend to push away."
+    ],
+    "followup_questions": [
+      "What bedside measures would you recommend to prevent this post-operatively?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Post-operative atelectasis",
+      "severity": "Mild",
+      "key_findings": [
+        "Volume loss",
+        "Shift toward affected side"
+      ]
+    }
+  },
+  {
+    "case_id": "case_011",
+    "image": "cardiomegaly/00006119_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-6780",
+      "age": 57,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 83,
+      "respiratory_rate": 17,
+      "blood_pressure": "115/78",
+      "spo2": 96
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_012",
+    "image": "cardiomegaly/00007094_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-1784",
+      "age": 58,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 91,
+      "respiratory_rate": 17,
+      "blood_pressure": "118/92",
+      "spo2": 96
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_013",
+    "image": "cardiomegaly/00007326_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-3889",
+      "age": 45,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 82,
+      "respiratory_rate": 21,
+      "blood_pressure": "124/70",
+      "spo2": 95
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_014",
+    "image": "cardiomegaly/00007688_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-4346",
+      "age": 45,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 84,
+      "respiratory_rate": 22,
+      "blood_pressure": "114/85",
+      "spo2": 97
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_015",
+    "image": "cardiomegaly/00007833_003.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-6858",
+      "age": 72,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 92,
+      "respiratory_rate": 17,
+      "blood_pressure": "144/74",
+      "spo2": 94
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_016",
+    "image": "cardiomegaly/00009342_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-6835",
+      "age": 74,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.5,
+      "heart_rate": 85,
+      "respiratory_rate": 16,
+      "blood_pressure": "127/88",
+      "spo2": 94
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_017",
+    "image": "cardiomegaly/00011379_045.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-9789",
+      "age": 67,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 88,
+      "respiratory_rate": 21,
+      "blood_pressure": "121/84",
+      "spo2": 97
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_018",
+    "image": "cardiomegaly/00014332_013.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-6716",
+      "age": 54,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 95,
+      "respiratory_rate": 21,
+      "blood_pressure": "118/87",
+      "spo2": 93
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_019",
+    "image": "cardiomegaly/00015202_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-9897",
+      "age": 68,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 87,
+      "respiratory_rate": 22,
+      "blood_pressure": "144/72",
+      "spo2": 97
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_020",
+    "image": "cardiomegaly/00018949_006.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-9301",
+      "age": 54,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive exertional breathlessness and leg swelling",
+      "history_of_present_illness": "Gradual breathlessness on exertion over several months, with ankle swelling in the evenings.",
+      "past_medical_history": [
+        "Hypertension",
+        "Prior myocardial infarction"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Metoprolol"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 96,
+      "respiratory_rate": 16,
+      "blood_pressure": "143/71",
+      "spo2": 93
+    },
+    "physical_exam": "Bilateral ankle edema, elevated JVP, displaced apex beat.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Apply the cardiothoracic ratio to assess heart size",
+      "Recognize signs of heart failure on a chest film"
+    ],
+    "expected_findings": [
+      "Cardiothoracic ratio > 50%",
+      "Possible pulmonary vascular congestion"
+    ],
+    "differential_diagnoses": [
+      "Dilated cardiomyopathy",
+      "Chronic heart failure",
+      "Pericardial effusion"
+    ],
+    "common_mistakes": [
+      "Calling cardiomegaly on an AP film without accounting for magnification"
+    ],
+    "teaching_points": [
+      "Cardiothoracic ratio is only reliable on an upright PA film — AP films exaggerate heart size."
+    ],
+    "followup_questions": [
+      "Why might this ratio be unreliable if the film was taken AP rather than PA?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Cardiomegaly, likely chronic heart failure",
+      "severity": "Moderate",
+      "key_findings": [
+        "Cardiothoracic ratio > 50%"
+      ]
+    }
+  },
+  {
+    "case_id": "case_021",
+    "image": "effusion/00006382_007.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-4335",
+      "age": 57,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.1,
+      "heart_rate": 100,
+      "respiratory_rate": 20,
+      "blood_pressure": "141/87",
+      "spo2": 94
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_022",
+    "image": "effusion/00009144_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-4136",
+      "age": 28,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.2,
+      "heart_rate": 86,
+      "respiratory_rate": 21,
+      "blood_pressure": "137/73",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_023",
+    "image": "effusion/00009595_016.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-9187",
+      "age": 23,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.1,
+      "heart_rate": 94,
+      "respiratory_rate": 26,
+      "blood_pressure": "118/91",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_024",
+    "image": "effusion/00010594_009.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-1174",
+      "age": 36,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 99,
+      "respiratory_rate": 23,
+      "blood_pressure": "142/74",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_025",
+    "image": "effusion/00010772_011.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-7580",
+      "age": 27,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.1,
+      "heart_rate": 88,
+      "respiratory_rate": 23,
+      "blood_pressure": "110/77",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_026",
+    "image": "effusion/00011814_022.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-9417",
+      "age": 73,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 87,
+      "respiratory_rate": 21,
+      "blood_pressure": "137/78",
+      "spo2": 88
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_027",
+    "image": "effusion/00011925_031.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-9571",
+      "age": 47,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 95,
+      "respiratory_rate": 20,
+      "blood_pressure": "113/83",
+      "spo2": 94
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_028",
+    "image": "effusion/00012018_012.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-5019",
+      "age": 65,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.3,
+      "heart_rate": 100,
+      "respiratory_rate": 27,
+      "blood_pressure": "121/75",
+      "spo2": 88
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_029",
+    "image": "effusion/00015369_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-4866",
+      "age": 71,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 99,
+      "respiratory_rate": 20,
+      "blood_pressure": "123/87",
+      "spo2": 93
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_030",
+    "image": "effusion/00016280_003.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2531",
+      "age": 37,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 96,
+      "respiratory_rate": 27,
+      "blood_pressure": "134/79",
+      "spo2": 89
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_031",
+    "image": "effusion/00017920_012.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-9175",
+      "age": 31,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 98,
+      "respiratory_rate": 27,
+      "blood_pressure": "120/84",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_032",
+    "image": "effusion/00018513_005.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-2159",
+      "age": 75,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 96,
+      "respiratory_rate": 22,
+      "blood_pressure": "132/78",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_033",
+    "image": "effusion/00019884_003.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-9497",
+      "age": 48,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.3,
+      "heart_rate": 101,
+      "respiratory_rate": 25,
+      "blood_pressure": "128/79",
+      "spo2": 91
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_034",
+    "image": "effusion/00020703_024.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-1700",
+      "age": 57,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 93,
+      "respiratory_rate": 28,
+      "blood_pressure": "117/74",
+      "spo2": 88
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_035",
+    "image": "effusion/00028485_007.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-1555",
+      "age": 36,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Progressive shortness of breath",
+      "history_of_present_illness": "Gradually worsening breathlessness over 1-2 weeks, worse lying flat, with a sensation of chest fullness.",
+      "past_medical_history": [
+        "Congestive heart failure"
+      ],
+      "medications": [
+        "Furosemide"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 103,
+      "respiratory_rate": 21,
+      "blood_pressure": "114/77",
+      "spo2": 89
+    },
+    "physical_exam": "Decreased breath sounds and dullness to percussion at the affected base.",
+    "lab_results": "BNP elevated.",
+    "learning_objectives": [
+      "Recognize blunting of the costophrenic angle as pleural effusion",
+      "Distinguish effusion from consolidation"
+    ],
+    "expected_findings": [
+      "Blunted costophrenic angle",
+      "Meniscus sign"
+    ],
+    "differential_diagnoses": [
+      "Heart failure with pleural effusion",
+      "Parapneumonic effusion",
+      "Malignant effusion"
+    ],
+    "common_mistakes": [
+      "Missing a small effusion on a supine or under-penetrated film"
+    ],
+    "teaching_points": [
+      "A meniscus-shaped fluid line is the classic sign of a free-flowing pleural effusion."
+    ],
+    "followup_questions": [
+      "Would you recommend a lateral decubitus film here, and why?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Pleural effusion",
+      "severity": "Moderate",
+      "key_findings": [
+        "Blunted costophrenic angle",
+        "Meniscus sign"
+      ]
+    }
+  },
+  {
+    "case_id": "case_036",
+    "image": "mass/00001278_008.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-1822",
+      "age": 49,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Persistent cough and unintentional weight loss",
+      "history_of_present_illness": "Chronic cough for over two months with unintentional weight loss and reduced appetite. Long smoking history.",
+      "past_medical_history": [
+        "30 pack-year smoking history"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 93,
+      "respiratory_rate": 22,
+      "blood_pressure": "110/71",
+      "spo2": 97
+    },
+    "physical_exam": "Possible focal wheeze or decreased breath sounds over the lesion. Cachexia may be present.",
+    "lab_results": "Mild anemia possible.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary mass and its concerning features",
+      "Build an appropriate malignancy-focused differential"
+    ],
+    "expected_findings": [
+      "Well- or ill-defined pulmonary mass > 3cm"
+    ],
+    "differential_diagnoses": [
+      "Primary lung malignancy",
+      "Metastasis",
+      "Granuloma",
+      "Abscess"
+    ],
+    "common_mistakes": [
+      "Failing to recommend CT chest for further characterization",
+      "Anchoring on infection without considering malignancy risk factors"
+    ],
+    "teaching_points": [
+      "Any new mass in a smoker over 40 needs malignancy actively excluded, not assumed benign."
+    ],
+    "followup_questions": [
+      "What imaging or workup would you order next to characterize this lesion?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Suspicious pulmonary mass, malignancy must be excluded",
+      "severity": "Significant",
+      "key_findings": [
+        "Solitary pulmonary mass"
+      ]
+    }
+  },
+  {
+    "case_id": "case_037",
+    "image": "mass/00011723_028.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-5376",
+      "age": 30,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Persistent cough and unintentional weight loss",
+      "history_of_present_illness": "Chronic cough for over two months with unintentional weight loss and reduced appetite. Long smoking history.",
+      "past_medical_history": [
+        "30 pack-year smoking history"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 93,
+      "respiratory_rate": 16,
+      "blood_pressure": "138/70",
+      "spo2": 93
+    },
+    "physical_exam": "Possible focal wheeze or decreased breath sounds over the lesion. Cachexia may be present.",
+    "lab_results": "Mild anemia possible.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary mass and its concerning features",
+      "Build an appropriate malignancy-focused differential"
+    ],
+    "expected_findings": [
+      "Well- or ill-defined pulmonary mass > 3cm"
+    ],
+    "differential_diagnoses": [
+      "Primary lung malignancy",
+      "Metastasis",
+      "Granuloma",
+      "Abscess"
+    ],
+    "common_mistakes": [
+      "Failing to recommend CT chest for further characterization",
+      "Anchoring on infection without considering malignancy risk factors"
+    ],
+    "teaching_points": [
+      "Any new mass in a smoker over 40 needs malignancy actively excluded, not assumed benign."
+    ],
+    "followup_questions": [
+      "What imaging or workup would you order next to characterize this lesion?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Suspicious pulmonary mass, malignancy must be excluded",
+      "severity": "Significant",
+      "key_findings": [
+        "Solitary pulmonary mass"
+      ]
+    }
+  },
+  {
+    "case_id": "case_038",
+    "image": "mass/00012376_008.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-1006",
+      "age": 62,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Persistent cough and unintentional weight loss",
+      "history_of_present_illness": "Chronic cough for over two months with unintentional weight loss and reduced appetite. Long smoking history.",
+      "past_medical_history": [
+        "30 pack-year smoking history"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 85,
+      "respiratory_rate": 22,
+      "blood_pressure": "129/85",
+      "spo2": 95
+    },
+    "physical_exam": "Possible focal wheeze or decreased breath sounds over the lesion. Cachexia may be present.",
+    "lab_results": "Mild anemia possible.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary mass and its concerning features",
+      "Build an appropriate malignancy-focused differential"
+    ],
+    "expected_findings": [
+      "Well- or ill-defined pulmonary mass > 3cm"
+    ],
+    "differential_diagnoses": [
+      "Primary lung malignancy",
+      "Metastasis",
+      "Granuloma",
+      "Abscess"
+    ],
+    "common_mistakes": [
+      "Failing to recommend CT chest for further characterization",
+      "Anchoring on infection without considering malignancy risk factors"
+    ],
+    "teaching_points": [
+      "Any new mass in a smoker over 40 needs malignancy actively excluded, not assumed benign."
+    ],
+    "followup_questions": [
+      "What imaging or workup would you order next to characterize this lesion?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Suspicious pulmonary mass, malignancy must be excluded",
+      "severity": "Significant",
+      "key_findings": [
+        "Solitary pulmonary mass"
+      ]
+    }
+  },
+  {
+    "case_id": "case_039",
+    "image": "mass/00016778_047.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-5377",
+      "age": 26,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Persistent cough and unintentional weight loss",
+      "history_of_present_illness": "Chronic cough for over two months with unintentional weight loss and reduced appetite. Long smoking history.",
+      "past_medical_history": [
+        "30 pack-year smoking history"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.1,
+      "heart_rate": 98,
+      "respiratory_rate": 22,
+      "blood_pressure": "110/87",
+      "spo2": 96
+    },
+    "physical_exam": "Possible focal wheeze or decreased breath sounds over the lesion. Cachexia may be present.",
+    "lab_results": "Mild anemia possible.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary mass and its concerning features",
+      "Build an appropriate malignancy-focused differential"
+    ],
+    "expected_findings": [
+      "Well- or ill-defined pulmonary mass > 3cm"
+    ],
+    "differential_diagnoses": [
+      "Primary lung malignancy",
+      "Metastasis",
+      "Granuloma",
+      "Abscess"
+    ],
+    "common_mistakes": [
+      "Failing to recommend CT chest for further characterization",
+      "Anchoring on infection without considering malignancy risk factors"
+    ],
+    "teaching_points": [
+      "Any new mass in a smoker over 40 needs malignancy actively excluded, not assumed benign."
+    ],
+    "followup_questions": [
+      "What imaging or workup would you order next to characterize this lesion?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Suspicious pulmonary mass, malignancy must be excluded",
+      "severity": "Significant",
+      "key_findings": [
+        "Solitary pulmonary mass"
+      ]
+    }
+  },
+  {
+    "case_id": "case_040",
+    "image": "mass/00019124_111.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-1060",
+      "age": 57,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Persistent cough and unintentional weight loss",
+      "history_of_present_illness": "Chronic cough for over two months with unintentional weight loss and reduced appetite. Long smoking history.",
+      "past_medical_history": [
+        "30 pack-year smoking history"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 85,
+      "respiratory_rate": 17,
+      "blood_pressure": "137/75",
+      "spo2": 96
+    },
+    "physical_exam": "Possible focal wheeze or decreased breath sounds over the lesion. Cachexia may be present.",
+    "lab_results": "Mild anemia possible.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary mass and its concerning features",
+      "Build an appropriate malignancy-focused differential"
+    ],
+    "expected_findings": [
+      "Well- or ill-defined pulmonary mass > 3cm"
+    ],
+    "differential_diagnoses": [
+      "Primary lung malignancy",
+      "Metastasis",
+      "Granuloma",
+      "Abscess"
+    ],
+    "common_mistakes": [
+      "Failing to recommend CT chest for further characterization",
+      "Anchoring on infection without considering malignancy risk factors"
+    ],
+    "teaching_points": [
+      "Any new mass in a smoker over 40 needs malignancy actively excluded, not assumed benign."
+    ],
+    "followup_questions": [
+      "What imaging or workup would you order next to characterize this lesion?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Suspicious pulmonary mass, malignancy must be excluded",
+      "severity": "Significant",
+      "key_findings": [
+        "Solitary pulmonary mass"
+      ]
+    }
+  },
+  {
+    "case_id": "case_041",
+    "image": "no_finding/00001203_013.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2183",
+      "age": 49,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 81,
+      "respiratory_rate": 15,
+      "blood_pressure": "114/81",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_042",
+    "image": "no_finding/00001845_002.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-1723",
+      "age": 46,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 71,
+      "respiratory_rate": 16,
+      "blood_pressure": "123/91",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_043",
+    "image": "no_finding/00002450_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-5828",
+      "age": 40,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 79,
+      "respiratory_rate": 17,
+      "blood_pressure": "142/87",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_044",
+    "image": "no_finding/00004205_015.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-5177",
+      "age": 62,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 73,
+      "respiratory_rate": 15,
+      "blood_pressure": "131/73",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_045",
+    "image": "no_finding/00006763_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6785",
+      "age": 29,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 80,
+      "respiratory_rate": 14,
+      "blood_pressure": "116/79",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_046",
+    "image": "no_finding/00007636_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-1999",
+      "age": 37,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 71,
+      "respiratory_rate": 17,
+      "blood_pressure": "137/91",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_047",
+    "image": "no_finding/00008713_002.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-7026",
+      "age": 63,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 82,
+      "respiratory_rate": 14,
+      "blood_pressure": "133/88",
+      "spo2": 97
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_048",
+    "image": "no_finding/00010469_001.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-8254",
+      "age": 38,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 82,
+      "respiratory_rate": 18,
+      "blood_pressure": "124/74",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_049",
+    "image": "no_finding/00011338_001.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-9568",
+      "age": 69,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 74,
+      "respiratory_rate": 15,
+      "blood_pressure": "129/86",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_050",
+    "image": "no_finding/00014768_004.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-4020",
+      "age": 29,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 71,
+      "respiratory_rate": 17,
+      "blood_pressure": "126/80",
+      "spo2": 98
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_051",
+    "image": "no_finding/00015107_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-8555",
+      "age": 23,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 76,
+      "respiratory_rate": 15,
+      "blood_pressure": "136/89",
+      "spo2": 98
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_052",
+    "image": "no_finding/00015929_009.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-3073",
+      "age": 71,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 74,
+      "respiratory_rate": 14,
+      "blood_pressure": "114/91",
+      "spo2": 97
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_053",
+    "image": "no_finding/00017458_004.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-3504",
+      "age": 36,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 75,
+      "respiratory_rate": 15,
+      "blood_pressure": "119/88",
+      "spo2": 97
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_054",
+    "image": "no_finding/00017981_004.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-5963",
+      "age": 40,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 69,
+      "respiratory_rate": 14,
+      "blood_pressure": "121/70",
+      "spo2": 98
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_055",
+    "image": "no_finding/00018960_005.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6622",
+      "age": 50,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.5,
+      "heart_rate": 81,
+      "respiratory_rate": 16,
+      "blood_pressure": "110/77",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_056",
+    "image": "no_finding/00019260_001.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6038",
+      "age": 43,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 71,
+      "respiratory_rate": 15,
+      "blood_pressure": "122/90",
+      "spo2": 98
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_057",
+    "image": "no_finding/00019460_002.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-9952",
+      "age": 56,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 71,
+      "respiratory_rate": 17,
+      "blood_pressure": "120/86",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_058",
+    "image": "no_finding/00021223_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-1994",
+      "age": 47,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 69,
+      "respiratory_rate": 16,
+      "blood_pressure": "110/70",
+      "spo2": 98
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_059",
+    "image": "no_finding/00024064_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-8977",
+      "age": 25,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 72,
+      "respiratory_rate": 15,
+      "blood_pressure": "118/77",
+      "spo2": 100
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_060",
+    "image": "no_finding/00024141_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-8488",
+      "age": 37,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 71,
+      "respiratory_rate": 17,
+      "blood_pressure": "123/86",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_061",
+    "image": "no_finding/00026243_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-4502",
+      "age": 54,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 71,
+      "respiratory_rate": 15,
+      "blood_pressure": "120/82",
+      "spo2": 97
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_062",
+    "image": "no_finding/00026765_000.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6051",
+      "age": 56,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.5,
+      "heart_rate": 83,
+      "respiratory_rate": 16,
+      "blood_pressure": "119/78",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_063",
+    "image": "no_finding/00027479_002.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-4767",
+      "age": 47,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 68,
+      "respiratory_rate": 18,
+      "blood_pressure": "141/70",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_064",
+    "image": "no_finding/00028639_001.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-3664",
+      "age": 24,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 71,
+      "respiratory_rate": 17,
+      "blood_pressure": "132/73",
+      "spo2": 97
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_065",
+    "image": "no_finding/00029676_010.png",
+    "view_position": "PA",
+    "difficulty": "beginner",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-8462",
+      "age": 46,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Pre-employment health screening, no respiratory complaints",
+      "history_of_present_illness": "Asymptomatic. Presents for a routine pre-employment medical exam. No cough, fever, or shortness of breath.",
+      "past_medical_history": [],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 73,
+      "respiratory_rate": 15,
+      "blood_pressure": "123/76",
+      "spo2": 99
+    },
+    "physical_exam": "Clear breath sounds bilaterally. No crackles, wheeze, or dullness to percussion.",
+    "lab_results": "Within normal limits.",
+    "learning_objectives": [
+      "Recognize the appearance of a normal chest radiograph",
+      "Identify normal lung markings, cardiac silhouette, and costophrenic angles"
+    ],
+    "expected_findings": [
+      "Clear lung fields",
+      "Normal cardiac silhouette",
+      "Sharp costophrenic angles"
+    ],
+    "differential_diagnoses": [
+      "No acute cardiopulmonary process"
+    ],
+    "common_mistakes": [
+      "Over-calling normal vascular markings as pathology"
+    ],
+    "teaching_points": [
+      "Knowing what's normal is the foundation for spotting what isn't."
+    ],
+    "followup_questions": [
+      "What specific landmarks did you check to confirm this film is normal?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Normal chest radiograph",
+      "severity": "None",
+      "key_findings": [
+        "No acute cardiopulmonary abnormality"
+      ]
+    }
+  },
+  {
+    "case_id": "case_066",
+    "image": "nodule/00008188_003.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-4905",
+      "age": 53,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Incidental finding on routine imaging",
+      "history_of_present_illness": "Asymptomatic. Nodule found incidentally on a chest film obtained for an unrelated reason.",
+      "past_medical_history": [
+        "Former smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.5,
+      "heart_rate": 76,
+      "respiratory_rate": 16,
+      "blood_pressure": "144/72",
+      "spo2": 97
+    },
+    "physical_exam": "Unremarkable.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary nodule < 3cm",
+      "Understand risk-stratification for an incidental nodule"
+    ],
+    "expected_findings": [
+      "Solitary well-defined nodule < 3cm"
+    ],
+    "differential_diagnoses": [
+      "Benign granuloma",
+      "Early primary lung malignancy",
+      "Hamartoma"
+    ],
+    "common_mistakes": [
+      "Not comparing with prior imaging to check for growth",
+      "Ignoring an incidental nodule instead of arranging follow-up"
+    ],
+    "teaching_points": [
+      "Nodule management hinges heavily on size, growth over time, and patient risk factors — always look for prior films to compare."
+    ],
+    "followup_questions": [
+      "What follow-up interval and imaging would you recommend for this nodule?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Solitary pulmonary nodule, indeterminate",
+      "severity": "Low-moderate",
+      "key_findings": [
+        "Solitary well-defined nodule"
+      ]
+    }
+  },
+  {
+    "case_id": "case_067",
+    "image": "nodule/00014731_012.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-2778",
+      "age": 60,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Incidental finding on routine imaging",
+      "history_of_present_illness": "Asymptomatic. Nodule found incidentally on a chest film obtained for an unrelated reason.",
+      "past_medical_history": [
+        "Former smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 85,
+      "respiratory_rate": 15,
+      "blood_pressure": "111/91",
+      "spo2": 97
+    },
+    "physical_exam": "Unremarkable.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary nodule < 3cm",
+      "Understand risk-stratification for an incidental nodule"
+    ],
+    "expected_findings": [
+      "Solitary well-defined nodule < 3cm"
+    ],
+    "differential_diagnoses": [
+      "Benign granuloma",
+      "Early primary lung malignancy",
+      "Hamartoma"
+    ],
+    "common_mistakes": [
+      "Not comparing with prior imaging to check for growth",
+      "Ignoring an incidental nodule instead of arranging follow-up"
+    ],
+    "teaching_points": [
+      "Nodule management hinges heavily on size, growth over time, and patient risk factors — always look for prior films to compare."
+    ],
+    "followup_questions": [
+      "What follow-up interval and imaging would you recommend for this nodule?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Solitary pulmonary nodule, indeterminate",
+      "severity": "Low-moderate",
+      "key_findings": [
+        "Solitary well-defined nodule"
+      ]
+    }
+  },
+  {
+    "case_id": "case_068",
+    "image": "nodule/00017098_008.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-8482",
+      "age": 73,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Incidental finding on routine imaging",
+      "history_of_present_illness": "Asymptomatic. Nodule found incidentally on a chest film obtained for an unrelated reason.",
+      "past_medical_history": [
+        "Former smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 80,
+      "respiratory_rate": 15,
+      "blood_pressure": "118/77",
+      "spo2": 99
+    },
+    "physical_exam": "Unremarkable.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary nodule < 3cm",
+      "Understand risk-stratification for an incidental nodule"
+    ],
+    "expected_findings": [
+      "Solitary well-defined nodule < 3cm"
+    ],
+    "differential_diagnoses": [
+      "Benign granuloma",
+      "Early primary lung malignancy",
+      "Hamartoma"
+    ],
+    "common_mistakes": [
+      "Not comparing with prior imaging to check for growth",
+      "Ignoring an incidental nodule instead of arranging follow-up"
+    ],
+    "teaching_points": [
+      "Nodule management hinges heavily on size, growth over time, and patient risk factors — always look for prior films to compare."
+    ],
+    "followup_questions": [
+      "What follow-up interval and imaging would you recommend for this nodule?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Solitary pulmonary nodule, indeterminate",
+      "severity": "Low-moderate",
+      "key_findings": [
+        "Solitary well-defined nodule"
+      ]
+    }
+  },
+  {
+    "case_id": "case_069",
+    "image": "nodule/00017503_001.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-9550",
+      "age": 49,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Incidental finding on routine imaging",
+      "history_of_present_illness": "Asymptomatic. Nodule found incidentally on a chest film obtained for an unrelated reason.",
+      "past_medical_history": [
+        "Former smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 37.0,
+      "heart_rate": 80,
+      "respiratory_rate": 15,
+      "blood_pressure": "132/82",
+      "spo2": 100
+    },
+    "physical_exam": "Unremarkable.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary nodule < 3cm",
+      "Understand risk-stratification for an incidental nodule"
+    ],
+    "expected_findings": [
+      "Solitary well-defined nodule < 3cm"
+    ],
+    "differential_diagnoses": [
+      "Benign granuloma",
+      "Early primary lung malignancy",
+      "Hamartoma"
+    ],
+    "common_mistakes": [
+      "Not comparing with prior imaging to check for growth",
+      "Ignoring an incidental nodule instead of arranging follow-up"
+    ],
+    "teaching_points": [
+      "Nodule management hinges heavily on size, growth over time, and patient risk factors — always look for prior films to compare."
+    ],
+    "followup_questions": [
+      "What follow-up interval and imaging would you recommend for this nodule?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Solitary pulmonary nodule, indeterminate",
+      "severity": "Low-moderate",
+      "key_findings": [
+        "Solitary well-defined nodule"
+      ]
+    }
+  },
+  {
+    "case_id": "case_070",
+    "image": "nodule/00029891_000.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-3532",
+      "age": 45,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Incidental finding on routine imaging",
+      "history_of_present_illness": "Asymptomatic. Nodule found incidentally on a chest film obtained for an unrelated reason.",
+      "past_medical_history": [
+        "Former smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.5,
+      "heart_rate": 80,
+      "respiratory_rate": 14,
+      "blood_pressure": "110/84",
+      "spo2": 98
+    },
+    "physical_exam": "Unremarkable.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify a solitary pulmonary nodule < 3cm",
+      "Understand risk-stratification for an incidental nodule"
+    ],
+    "expected_findings": [
+      "Solitary well-defined nodule < 3cm"
+    ],
+    "differential_diagnoses": [
+      "Benign granuloma",
+      "Early primary lung malignancy",
+      "Hamartoma"
+    ],
+    "common_mistakes": [
+      "Not comparing with prior imaging to check for growth",
+      "Ignoring an incidental nodule instead of arranging follow-up"
+    ],
+    "teaching_points": [
+      "Nodule management hinges heavily on size, growth over time, and patient risk factors — always look for prior films to compare."
+    ],
+    "followup_questions": [
+      "What follow-up interval and imaging would you recommend for this nodule?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Solitary pulmonary nodule, indeterminate",
+      "severity": "Low-moderate",
+      "key_findings": [
+        "Solitary well-defined nodule"
+      ]
+    }
+  },
+  {
+    "case_id": "case_071",
+    "image": "pneumonia/00001162_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-4518",
+      "age": 51,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.2,
+      "heart_rate": 108,
+      "respiratory_rate": 22,
+      "blood_pressure": "126/82",
+      "spo2": 91
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_072",
+    "image": "pneumonia/00001504_011.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-8030",
+      "age": 52,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.7,
+      "heart_rate": 109,
+      "respiratory_rate": 20,
+      "blood_pressure": "141/70",
+      "spo2": 95
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_073",
+    "image": "pneumonia/00001582_023.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-8709",
+      "age": 59,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 39.1,
+      "heart_rate": 107,
+      "respiratory_rate": 20,
+      "blood_pressure": "135/85",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_074",
+    "image": "pneumonia/00002360_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-8322",
+      "age": 40,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.6,
+      "heart_rate": 109,
+      "respiratory_rate": 20,
+      "blood_pressure": "129/77",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_075",
+    "image": "pneumonia/00004959_003.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-3542",
+      "age": 58,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 39.2,
+      "heart_rate": 99,
+      "respiratory_rate": 23,
+      "blood_pressure": "120/77",
+      "spo2": 94
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_076",
+    "image": "pneumonia/00006260_001.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-7429",
+      "age": 64,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.8,
+      "heart_rate": 106,
+      "respiratory_rate": 24,
+      "blood_pressure": "127/73",
+      "spo2": 93
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_077",
+    "image": "pneumonia/00007007_004.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6909",
+      "age": 55,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 39.1,
+      "heart_rate": 105,
+      "respiratory_rate": 21,
+      "blood_pressure": "122/81",
+      "spo2": 93
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_078",
+    "image": "pneumonia/00007557_001.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-5575",
+      "age": 38,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.0,
+      "heart_rate": 98,
+      "respiratory_rate": 22,
+      "blood_pressure": "145/87",
+      "spo2": 91
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_079",
+    "image": "pneumonia/00008043_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-8312",
+      "age": 69,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.3,
+      "heart_rate": 105,
+      "respiratory_rate": 24,
+      "blood_pressure": "145/84",
+      "spo2": 95
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_080",
+    "image": "pneumonia/00010530_028.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2712",
+      "age": 43,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.1,
+      "heart_rate": 100,
+      "respiratory_rate": 22,
+      "blood_pressure": "139/78",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_081",
+    "image": "pneumonia/00011583_007.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-2012",
+      "age": 65,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.4,
+      "heart_rate": 107,
+      "respiratory_rate": 23,
+      "blood_pressure": "142/92",
+      "spo2": 91
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_082",
+    "image": "pneumonia/00012012_007.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-6567",
+      "age": 53,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.8,
+      "heart_rate": 106,
+      "respiratory_rate": 23,
+      "blood_pressure": "143/71",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_083",
+    "image": "pneumonia/00013992_016.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-5668",
+      "age": 66,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.1,
+      "heart_rate": 104,
+      "respiratory_rate": 26,
+      "blood_pressure": "110/85",
+      "spo2": 91
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_084",
+    "image": "pneumonia/00015069_000.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2616",
+      "age": 69,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 39.0,
+      "heart_rate": 98,
+      "respiratory_rate": 20,
+      "blood_pressure": "122/88",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_085",
+    "image": "pneumonia/00017424_030.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-4666",
+      "age": 25,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.0,
+      "heart_rate": 100,
+      "respiratory_rate": 20,
+      "blood_pressure": "115/87",
+      "spo2": 95
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_086",
+    "image": "pneumonia/00022338_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-1799",
+      "age": 50,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.6,
+      "heart_rate": 114,
+      "respiratory_rate": 26,
+      "blood_pressure": "128/78",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_087",
+    "image": "pneumonia/00023271_016.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-5705",
+      "age": 38,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.9,
+      "heart_rate": 110,
+      "respiratory_rate": 24,
+      "blood_pressure": "128/78",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_088",
+    "image": "pneumonia/00026560_010.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-5639",
+      "age": 35,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.6,
+      "heart_rate": 103,
+      "respiratory_rate": 22,
+      "blood_pressure": "141/77",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_089",
+    "image": "pneumonia/00026848_007.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-1597",
+      "age": 38,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 39.0,
+      "heart_rate": 105,
+      "respiratory_rate": 22,
+      "blood_pressure": "120/85",
+      "spo2": 94
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_090",
+    "image": "pneumonia/00029801_002.png",
+    "view_position": "PA",
+    "difficulty": "intermediate",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-5086",
+      "age": 22,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Cough and fever for several days",
+      "history_of_present_illness": "Progressive productive cough, subjective fevers, and pleuritic chest pain over the past few days. No hemoptysis.",
+      "past_medical_history": [
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        "Metformin"
+      ],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 38.4,
+      "heart_rate": 113,
+      "respiratory_rate": 21,
+      "blood_pressure": "130/84",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and crackles over the affected lung field. No wheeze.",
+    "lab_results": "WBC elevated, CRP elevated.",
+    "learning_objectives": [
+      "Identify a lobar or patchy consolidation on a chest film",
+      "Correlate radiographic findings with vitals and exam"
+    ],
+    "expected_findings": [
+      "Focal consolidation",
+      "Air bronchograms within the consolidation"
+    ],
+    "differential_diagnoses": [
+      "Community-acquired pneumonia",
+      "Pulmonary infarction",
+      "Atelectasis"
+    ],
+    "common_mistakes": [
+      "Mistaking consolidation for a mass due to rounded margins",
+      "Overlooking air bronchograms"
+    ],
+    "teaching_points": [
+      "Air bronchograms strongly suggest an alveolar (airspace) process rather than a mass."
+    ],
+    "followup_questions": [
+      "What score would you use to decide outpatient vs inpatient management here?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Community-acquired pneumonia",
+      "severity": "Moderate",
+      "key_findings": [
+        "Focal consolidation",
+        "Air bronchograms"
+      ]
+    }
+  },
+  {
+    "case_id": "case_091",
+    "image": "pneumothorax/00011460_066.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-3611",
+      "age": 78,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 118,
+      "respiratory_rate": 22,
+      "blood_pressure": "114/71",
+      "spo2": 88
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_092",
+    "image": "pneumothorax/00013391_001.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-3498",
+      "age": 47,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 106,
+      "respiratory_rate": 25,
+      "blood_pressure": "144/80",
+      "spo2": 89
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_093",
+    "image": "pneumothorax/00020779_001.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-7936",
+      "age": 22,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.6,
+      "heart_rate": 117,
+      "respiratory_rate": 30,
+      "blood_pressure": "134/89",
+      "spo2": 87
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_094",
+    "image": "pneumothorax/00021414_004.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-2871",
+      "age": 62,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 101,
+      "respiratory_rate": 29,
+      "blood_pressure": "119/90",
+      "spo2": 92
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_095",
+    "image": "pneumothorax/00023160_003.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-7018",
+      "age": 37,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 103,
+      "respiratory_rate": 30,
+      "blood_pressure": "141/85",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_096",
+    "image": "pneumothorax/00025695_005.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-7683",
+      "age": 59,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.8,
+      "heart_rate": 107,
+      "respiratory_rate": 28,
+      "blood_pressure": "145/72",
+      "spo2": 88
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_097",
+    "image": "pneumothorax/00026746_000.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-3005",
+      "age": 45,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 117,
+      "respiratory_rate": 30,
+      "blood_pressure": "121/87",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_098",
+    "image": "pneumothorax/00028987_015.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 6,
+    "patient": {
+      "id": "P-2949",
+      "age": 34,
+      "gender": "Male"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.7,
+      "heart_rate": 115,
+      "respiratory_rate": 23,
+      "blood_pressure": "121/74",
+      "spo2": 89
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_099",
+    "image": "pneumothorax/00029813_010.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 8,
+    "patient": {
+      "id": "P-8331",
+      "age": 36,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 116,
+      "respiratory_rate": 27,
+      "blood_pressure": "117/87",
+      "spo2": 90
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  },
+  {
+    "case_id": "case_100",
+    "image": "pneumothorax/00030650_000.png",
+    "view_position": "PA",
+    "difficulty": "advanced",
+    "estimated_time_minutes": 10,
+    "patient": {
+      "id": "P-7393",
+      "age": 27,
+      "gender": "Female"
+    },
+    "clinical_presentation": {
+      "chief_complaint": "Sudden onset chest pain and breathlessness",
+      "history_of_present_illness": "Sudden sharp, one-sided chest pain with acute shortness of breath, no preceding trauma reported.",
+      "past_medical_history": [
+        "Tall, thin build",
+        "Smoker"
+      ],
+      "medications": [],
+      "allergies": [
+        "NKDA"
+      ]
+    },
+    "vitals": {
+      "temperature_c": 36.9,
+      "heart_rate": 105,
+      "respiratory_rate": 22,
+      "blood_pressure": "114/70",
+      "spo2": 86
+    },
+    "physical_exam": "Decreased breath sounds and hyperresonance on the affected side, reduced chest expansion.",
+    "lab_results": "Not contributory.",
+    "learning_objectives": [
+      "Identify the visceral pleural line and absence of lung markings peripheral to it",
+      "Recognize tension physiology as a medical emergency"
+    ],
+    "expected_findings": [
+      "Visible pleural line",
+      "Absent peripheral lung markings"
+    ],
+    "differential_diagnoses": [
+      "Spontaneous pneumothorax",
+      "Tension pneumothorax",
+      "Bullous lung disease"
+    ],
+    "common_mistakes": [
+      "Missing a small apical pneumothorax",
+      "Not checking for tracheal deviation/tension signs"
+    ],
+    "teaching_points": [
+      "Tracheal deviation away from the affected side plus hypotension signals tension pneumothorax — treat immediately, don't wait for imaging confirmation."
+    ],
+    "followup_questions": [
+      "What exam findings would make you suspect this has become a tension pneumothorax?"
+    ],
+    "ground_truth": {
+      "diagnosis": "Spontaneous pneumothorax",
+      "severity": "Moderate",
+      "key_findings": [
+        "Visceral pleural line",
+        "Absent peripheral markings"
+      ]
+    }
+  }
+]
