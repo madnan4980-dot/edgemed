@@ -179,8 +179,31 @@ function StartScreen({ onStart, onReportAnalysis, onPrescriptionLab, onEcgDemo, 
   )
 }
 
+function getScreenFromPath(pathname = window.location.pathname) {
+  if (pathname.startsWith('/report-analysis')) return 'report'
+  if (pathname.startsWith('/prescription-lab')) return 'prescription'
+  if (pathname.startsWith('/ecg-demo')) return 'ecg'
+  if (pathname.startsWith('/simulation') || pathname.startsWith('/checkup')) return 'simulation'
+  return 'start'
+}
+
+function getPathForScreen(screen) {
+  switch (screen) {
+    case 'report':
+      return '/report-analysis'
+    case 'prescription':
+      return '/prescription-lab'
+    case 'ecg':
+      return '/ecg-demo'
+    case 'simulation':
+      return '/simulation'
+    default:
+      return '/'
+  }
+}
+
 function App() {
-  const [screen, setScreen] = useState('start')
+  const [screen, setScreen] = useState(() => getScreenFromPath(window.location.pathname))
   const [session, setSession] = useState(null)
   const [lang, setLang] = useState('en')
   const [advice, setAdvice] = useState('')
@@ -196,6 +219,26 @@ function App() {
   const { speak, startListening, stopListening } = useSpeech(lang)
   const patientSpokenRef = useRef(null)
   const startingRef = useRef(false)
+
+  const navigateToScreen = useCallback((nextScreen, options = {}) => {
+    const nextPath = getPathForScreen(nextScreen)
+    const method = options.replace ? 'replaceState' : 'pushState'
+
+    if (window.location.pathname !== nextPath) {
+      window.history[method](null, '', nextPath)
+    }
+
+    setScreen(nextScreen)
+  }, [])
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setScreen(getScreenFromPath(window.location.pathname))
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
 
   useEffect(() => {
     checkHealth().then(setHealth).catch(() => {})
@@ -233,7 +276,7 @@ function App() {
     try {
       const data = await startSession(language)
       setSession(data)
-      setScreen('simulation')
+      navigateToScreen('simulation')
       setEvaluation(null)
       setAdvice('')
       setMedicines([])
@@ -247,15 +290,15 @@ function App() {
   }
 
   const handleReportAnalysis = () => {
-    setScreen('report')
+    navigateToScreen('report')
   }
 
   const handleEcgDemo = () => {
-    setScreen('ecg')
+    navigateToScreen('ecg')
   }
 
   const handleBackToStart = () => {
-    setScreen('start')
+    navigateToScreen('start', { replace: true })
   }
 
   const handleLangSwitch = async (newLang) => {
@@ -331,7 +374,7 @@ function App() {
       <StartScreen
         onStart={handleStart}
         onReportAnalysis={handleReportAnalysis}
-        onPrescriptionLab={() => setScreen('prescription')}
+        onPrescriptionLab={() => navigateToScreen('prescription')}
         onEcgDemo={handleEcgDemo}
         health={health}
         loading={loading}
