@@ -275,10 +275,30 @@ async def chat_route(req: ChatRequest):
     return {"reply": reply}
 
 
-@app.get("/api/reports/{filename}")
-async def get_report(filename: str):
-    path = REPORTS_DIR / filename
-    if not path.exists():
+@app.get("/api/reports/{path:path}")
+async def get_report(path: str):
+    clean_path = path.replace('\\', '/').strip('/')
+    if not clean_path:
         raise HTTPException(404, "Report image not found")
-    return FileResponse(path)
+
+    candidate = (REPORTS_DIR / clean_path).resolve()
+    report_root = REPORTS_DIR.resolve()
+    try:
+        candidate.relative_to(report_root)
+    except ValueError as exc:
+        raise HTTPException(403, "Invalid report path") from exc
+
+    if not candidate.exists() or not candidate.is_file():
+        # Also support a nested image path that starts with a folder name directly under report_images.
+        fallback = report_root / clean_path.split('/')[-1]
+        if fallback.exists() and fallback.is_file():
+            candidate = fallback
+        else:
+            raise HTTPException(404, "Report image not found")
+
+    response = FileResponse(candidate)
+    response.headers["Access-Control-Allow-Origin"] = "http://localhost:5173"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    response.headers["Vary"] = "Origin"
+    return response
 

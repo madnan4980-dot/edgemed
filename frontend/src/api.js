@@ -73,7 +73,7 @@ export async function fetchTTS(text, language, gender) {
 }
 
 export function reportUrl(imagePath) {
-  return `${API_BASE}/reports/${imagePath}`
+  return `${API_BASE}/api/reports/${encodeURIComponent(imagePath)}`
 }
 
 export function xrayUrl(imagePath) {
@@ -127,7 +127,7 @@ async function loadImageAsBase64(imagePath) {
     throw new Error('No image path provided')
   }
 
-  const imageUrl = imagePath.startsWith('http') ? imagePath : `${API_BASE}/reports/${imagePath}`
+  const imageUrl = imagePath.startsWith('http') ? imagePath : `${API_BASE}/api/reports/${encodeURIComponent(imagePath)}`
   const res = await fetch(imageUrl)
   if (!res.ok) throw new Error('Failed to load X-ray image')
 
