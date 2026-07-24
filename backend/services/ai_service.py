@@ -22,6 +22,20 @@ ILLNESS_CATEGORIES = [
     "neurologic",
 ]
 
+CATEGORY_HINTS = {
+    "cardiac": "heart-related complaints such as chest discomfort, a heavy/tight feeling in the chest, palpitations-type sensations described in plain language, or symptoms brought on by exertion",
+    "respiratory": "breathing/lung-related complaints such as persistent cough, breathing difficulty, or chest congestion",
+    "gastrointestinal": "stomach/digestive complaints such as abdominal pain, nausea, vomiting, or bowel changes",
+    "infectious": "fever/infection-related complaints such as ongoing fever, body aches, or suspected mosquito-borne illness",
+    "endocrine": "hormonal/metabolic complaints such as unusual thirst, frequent urination, fatigue, or unexplained weight change",
+    "neurologic": "brain/nerve-related complaints such as headache, dizziness, weakness, numbness, or trouble speaking",
+}
+
+COMMON_TESTS = [
+    "CBC w/ differential", "Basic Metabolic Panel", "Liver Function (LFT)",
+    "TSH", "Vitamin B12 / Folate", "Urinalysis", "CRP", "Troponin", "ECG",
+]
+
 FORBIDDEN_CLINICAL_TERMS = [
     "shortness of breath",
     "chest tightness",
@@ -42,7 +56,106 @@ MIN_COMPLAINT_WORDS = 60
 GEN_TEMPERATURE = 0.7
 GEN_TEMPERATURE_RETRY = 0.55  # tighter on retry, favors format compliance
 GEN_MAX_TOKENS = 300
-GEN_RETRIES = 0  # avoid extra retries to keep latency low
+GEN_RETRIES = 2
+
+PATIENT_TEMPLATES_PATH = BACKEND_ROOT / "data" / "patients.json"
+REPORT_IMAGES_ROOT = BACKEND_ROOT / "data" / "report_images"
+
+IMAGING_TEST_KEYWORDS = ["x-ray", "xray", "chest x-ray", "chest xray", "cxr"]
+
+REPORT_CASES_PATH = BACKEND_ROOT / "data" / "report_lab_cases.json"
+
+DIAGNOSIS_KEYWORD_TO_FOLDER = {
+    "pneumonia": "pneumonia",
+    "consolidation": "pneumonia",
+    "infiltrate": "pneumonia",
+    "pneumonitis": "pneumonia",
+    "tb": "pneumonia",
+    "tuberculosis": "pneumonia",
+    "effusion": "effusion",
+    "pleural fluid": "effusion",
+    "atelectasis": "atelectasis",
+    "collapse": "atelectasis",
+    "pneumothorax": "pneumothorax",
+    "cardiomegaly": "cardiomegaly",
+    "cardiac": "cardiomegaly",
+    "heart failure": "cardiomegaly",
+    "chf": "cardiomegaly",
+    "cardiomyopathy": "cardiomegaly",
+    "angina": "cardiomegaly",
+    "coronary": "cardiomegaly",
+    "mass": "mass",
+    "tumor": "mass",
+    "tumour": "mass",
+    "malignan": "mass",
+    "nodule": "nodule",
+}
+
+
+def _load_report_case_images() -> list[dict[str, Any]]:
+    """Read the SAME file report.py's _load_cases() reads, so any image path
+    we pick is guaranteed to already have been verified to exist on disk by
+    scripts/generate_report_cases.py."""
+    try:
+        with REPORT_CASES_PATH.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def _pick_xray_image(patient: dict[str, Any]) -> str | None:
+    """Pick a real chest X-ray asset consistent with the patient's condition,
+    falling back to a normal film if nothing category-specific is found."""
+    if not REPORT_IMAGES_ROOT.exists():
+        return None
+
+    haystack = " ".join(
+        str(patient.get(field, "")) for field in ("template_condition", "correct_diagnosis_en", "condition")
+    ).lower()
+
+    candidate_categories: list[str] = []
+    for keyword, folder in DIAGNOSIS_KEYWORD_TO_FOLDER.items():
+        if keyword in haystack:
+            candidate_categories.append(folder)
+
+    def _images_in(category: str) -> list[Path]:
+        folder = REPORT_IMAGES_ROOT / category
+        if not folder.is_dir():
+            return []
+        return [f for f in folder.iterdir() if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".svg"}]
+
+    pool: list[tuple[str, Path]] = []
+    for category in dict.fromkeys(candidate_categories):
+        for img in _images_in(category):
+            pool.append((category, img))
+
+    if pool:
+        category, img = random.choice(pool)
+        return f"{category}/{img.name}"
+
+    for fallback_category in ("normal", "no_finding"):
+        images = _images_in(fallback_category)
+        if images:
+            return f"{fallback_category}/{random.choice(images).name}"
+
+    # Last resort: any image from any subfolder under report_images.
+    any_images: list[tuple[str, Path]] = []
+    for folder in REPORT_IMAGES_ROOT.iterdir():
+        if folder.is_dir():
+            for img in _images_in(folder.name):
+                any_images.append((folder.name, img))
+
+    if any_images:
+        category, img = random.choice(any_images)
+        return f"{category}/{img.name}"
+
+    return None
+
+
+def _report_image_exists(image_path: str | None) -> bool:
+    if not image_path:
+        return False
+    return (REPORT_IMAGES_ROOT / image_path).is_file()
 
 
 def _gemini_key() -> str:
@@ -129,6 +242,134 @@ def _parse_generated_patient(raw: str) -> dict[str, Any] | None:
     return parsed if isinstance(parsed, dict) else None
 
 
+async def order_test(patient: dict[str, Any], test_name: str, language: str = "en") -> dict[str, Any]:
+    normalized = test_name.strip().lower()
+
+    # --- Imaging tests: use a real X-ray asset instead of having Gemma invent one ---
+    if any(kw in normalized for kw in IMAGING_TEST_KEYWORDS):
+        image_path = None
+        if patient.get("report_type") == "xray" and patient.get("report_image"):
+            candidate = patient["report_image"]
+            if _report_image_exists(candidate):
+                image_path = candidate
+
+        if not image_path:
+            image_path = _pick_xray_image(patient)
+
+        return {
+            "test_name": test_name,
+            "report_type": "xray",
+            "report_image": image_path or "",
+        }
+
+    # --- Lab / non-imaging tests: elaborate, numeric, multi-component results ---
+    if "ecg" in normalized or "ekg" in normalized:
+        prompt = f"""You are a hospital electrocardiography reporting system generating one realistic,
+detailed ECG result for a training simulator.
+
+Patient's real underlying diagnosis (reference only): {patient.get('correct_diagnosis_en')}
+Patient history: {patient.get('history_en')}
+Test ordered: {test_name}
+
+Generate a concise ECG interpretation line with at least five components: heart rate,
+rhythm, axis, PR interval, QRS duration, QTc, and any ST/T changes or abnormal findings.
+Use plain clinical phrases and include a short flag when something is abnormal.
+
+Return ONLY valid JSON:
+{{
+  "status": "normal" or "abnormal",
+  "summary_en": "<ECG interpretation line with rate, rhythm, axis, intervals, and findings>",
+  "summary_bn": "<Bengali version, same interpretation and values>"
+}}"""
+    else:
+        prompt = f"""You are a hospital laboratory system generating one realistic, ELABORATE test
+result for a training simulator — like a real lab report, not a one-word summary.
+
+Patient's real underlying diagnosis (reference only): {patient.get('correct_diagnosis_en')}
+Patient history: {patient.get('history_en')}
+Test ordered: {test_name}
+
+Generate 3-6 specific named components appropriate for this test. For CBC, include Hgb, WBC,
+Platelet count, MCV, MCHC, RDW. For Basic Metabolic Panel, include Sodium, Potassium, Chloride,
+Bicarbonate, BUN, Creatinine, Glucose, Calcium. For Urinalysis, include Color, Clarity, pH,
+Specific gravity, RBC, WBC, Protein, Glucose, Nitrite, Leukocyte esterase. For CRP, include
+CRP value and optionally ESR or fibrinogen.
+
+Each component should have a realistic numeric value, correct unit, and a short flag when
+abnormal (e.g. "low", "high", "microcytic"). If this test is plausibly abnormal given the
+diagnosis, make the relevant component(s) abnormal with clinically consistent values;
+components unrelated to the diagnosis should stay normal. Don't make every ordered test
+abnormal — most unrelated tests should come back normal.
+
+Format summary_en/summary_bn as ONE comma-separated line combining all components, e.g.:
+"Hgb 9.2 g/dL (low), MCV 72 fL (microcytic), RDW 17% (high)."
+
+Return ONLY valid JSON:
+{{
+  "status": "normal" or "abnormal",
+  "summary_en": "<comma-separated components with real numbers and units, as above>",
+  "summary_bn": "<Bengali version, same numbers/units>"
+}}"""
+    raw = await generate_text(prompt, temperature=0.45, max_tokens=300)
+    result = _parse_json_response(raw)
+    result["test_name"] = test_name
+    result.setdefault("status", "normal")
+    result.setdefault("summary_en", "Within normal limits.")
+    result.setdefault("summary_bn", "স্বাভাবিক সীমার মধ্যে।")
+    return result
+
+
+async def patient_chat_reply(
+    patient: dict[str, Any], history: list[dict[str, str]], message: str, language: str = "en"
+) -> str:
+    lang_hint = "Respond in Bengali." if language == "bn" else "Respond in English."
+    convo = "\n".join(f"{h.get('role')}: {h.get('content')}" for h in history[-6:])
+    prompt = f"""You are roleplaying AS the patient in a doctor-training simulator, staying fully in
+character. Never reveal your diagnosis directly or use clinical terms — describe sensations and
+worries the way a real patient would, consistent with your case below.
+
+Your case: {patient.get('chief_complaint_en')}
+Your history: {patient.get('history_en')}
+
+Conversation so far:
+{convo}
+
+The doctor just asked: \"{message}\"
+
+Reply as the patient only, 1-3 short sentences, plain worried language, no medical jargon. {lang_hint}"""
+    raw = await generate_text(prompt, temperature=0.75, max_tokens=150)
+    return raw.strip()
+
+
+# In-memory recency tracker so Gemma doesn't repeat the same condition back
+# to back across a session. This only informs the prompt — it never decides
+# anything on Gemma's behalf.
+_RECENT_CONDITIONS: list[str] = []
+_RECENT_CONDITIONS_MAXLEN = 8
+
+
+def _remember_condition(condition: str) -> None:
+    if not condition:
+        return
+    _RECENT_CONDITIONS.append(condition)
+    while len(_RECENT_CONDITIONS) > _RECENT_CONDITIONS_MAXLEN:
+        _RECENT_CONDITIONS.pop(0)
+
+
+def _load_inspiration_pool() -> list[dict[str, Any]]:
+    """Optional seed conditions Gemma may draw from or ignore — a diversity
+    hint, not a selection mechanism. Safe to return [] if the file is absent."""
+    try:
+        with PATIENT_TEMPLATES_PATH.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+    return [item for item in payload if isinstance(item, dict)] if isinstance(payload, list) else []
+
+
+ALLOWED_MODULES = ["chest_xray", "laboratory", "imaging", "ecg", "prescription", "general"]
+
+
 import re
 
 _CHART_NOTE_PATTERN = re.compile(r"\bfor (the past |several )?\d+\s*(day|week)s?\b.*\bassociated with\b")
@@ -141,6 +382,18 @@ def _sounds_clinical_or_too_short(text: str) -> bool:
     if any(term in lowered for term in FORBIDDEN_CLINICAL_TERMS):
         return True
     return bool(_CHART_NOTE_PATTERN.search(lowered))
+
+
+def _explain_violation(text: str) -> str | None:
+    if not text or len(text.split()) < MIN_COMPLAINT_WORDS:
+        return f"A complaint field was too short — needs at least {MIN_COMPLAINT_WORDS} words, minimum 4 sentences."
+    lowered = text.lower()
+    hit = next((term for term in FORBIDDEN_CLINICAL_TERMS if term in lowered), None)
+    if hit:
+        return f"A complaint field used the forbidden clinical term '{hit}' — describe the sensation in plain, non-medical language instead."
+    if _CHART_NOTE_PATTERN.search(lowered):
+        return "A complaint field read like a clinical chart note — rewrite as a rambling, worried patient voice."
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -494,35 +747,144 @@ Return ONLY valid JSON, no markdown fences, no commentary, in exactly this struc
 }}"""
 
 
-async def generate_patient(language: str = "en") -> dict[str, Any]:
-    category = random.choice(ILLNESS_CATEGORIES)
-    age = random.randint(3, 82)
-    gender = random.choice(["Male", "Female"])
-    prompt = _build_patient_prompt(category, age, gender)
+def _build_full_case_prompt(language: str = "en", category: str | None = None) -> str:
+     inspiration = _load_inspiration_pool()
+     inspiration_conditions = sorted({str(t.get("condition")) for t in inspiration if t.get("condition")})
+     avoid_note = (
+          f"Avoid repeating these recently-used conditions: {', '.join(_RECENT_CONDITIONS)}."
+          if _RECENT_CONDITIONS else ""
+     )
+     language_hint = "Bengali" if language == "bn" else "English"
+
+     category_instruction = ""
+     if category and category in CATEGORY_HINTS:
+          category_instruction = f"""
+IMPORTANT — CATEGORY CONSTRAINT: The student specifically chose to practice **{category}**
+cases. The condition you design MUST fall within this category: {CATEGORY_HINTS[category]}.
+Do not pick a condition from a different body system, even if it seems interesting. You still
+choose the exact condition, difficulty, module, and patient details yourself — just within
+this category.
+"""
+
+     return f"""You are designing a complete patient case for a doctor-training simulator in
+present-day Bangladesh. YOU choose every aspect of the scenario — module, condition,
+difficulty, patient demographics, and personality — then write the patient's dialogue.
+The DOCTOR using this simulator must do the diagnostic work; your job is both to design
+a good teaching case AND to voice the patient realistically.
+
+{category_instruction}
+
+Choose a module from: {', '.join(ALLOWED_MODULES)} (pick whichever best fits the
+condition you choose — e.g. a respiratory case suits chest_xray, a cardiac rhythm
+case suits ecg, a general complaint suits laboratory or prescription).
+
+For inspiration only, conditions previously used in this simulator include:
+{', '.join(inspiration_conditions) or 'none on record'}. You are free to pick any of
+these, a variation, or an entirely different realistic condition appropriate for a
+Bangladeshi primary/secondary care setting — prioritize variety and clinical relevance
+over sticking to this list. {avoid_note}
+
+Pick age (realistic for the condition), gender, and a personality (e.g. anxious,
+reserved, talkative, guarded, practical) that fits how a real person with this
+condition and background might present.
+
+MANDATORY RULES for chief_complaint_en / chief_complaint_bn — checked programmatically,
+case is rejected if violated:
+1. MINIMUM 4 full sentences, MINIMUM {MIN_COMPLAINT_WORDS} words. Vague and rambling,
+    worried/nervous tone, at least one explicit hesitation ("um", "...", "I don't know
+    how to explain this").
+2. Describe SENSATIONS, FEARS, everyday observations in plain language — NO medical
+    terms, clinical labels, or technical phrasing.
+3. NEVER use these words or close equivalents: {', '.join(FORBIDDEN_CLINICAL_TERMS)}
+4. NEVER produce a chart-note style symptom list or timeframe (e.g. "symptom X and Y
+    for a few days, associated with symptom Z").
+5. Show visible fear/confusion/worry — mention what they're scared it might be, what a
+    neighbour/relative said, or how it's disrupting work/family life.
+6. Include at least one trailing thought or self-questioning line.
+
+Keep the underlying clinical picture (vitals, labs, diagnosis) medically accurate and
+internally consistent with the condition you chose. Write chief_complaint_en/bn and
+history_en/bn in {language_hint} as the primary language; always populate both *_en
+and *_bn fields regardless (translate naturally, not literally).
+
+Return ONLY valid JSON, no markdown fences, no commentary, in exactly this structure:
+{{
+  "module": "<one of: {', '.join(ALLOWED_MODULES)}>",
+  "condition": "<the condition/diagnosis category you chose, short label>",
+  "difficulty": "<Easy|Medium|Hard>",
+  "personality": "<one word/short phrase describing how this patient presents>",
+  "name_en": "<full Bangladeshi name>",
+  "name_bn": "<same name in Bengali script>",
+  "age": <realistic int for this condition>,
+  "gender_en": "Male|Female",
+  "gender_bn": "<পুরুষ or মহিলা>",
+  "blood_group": "<A+/A-/B+/B-/AB+/AB-/O+/O->",
+  "weight_kg": <realistic integer>,
+  "chief_complaint_en": "<minimum 4 sentences, per rules above>",
+  "chief_complaint_bn": "<Bengali version, same length and register>",
+  "history_en": "<2-3 sentences: occupation, lifestyle, relevant family/social history>",
+  "history_bn": "<Bengali version>",
+  "followup_complaint_en": "<2-3 sentences when returning with test results, same rules>",
+  "followup_complaint_bn": "<Bengali version>",
+  "vitals": {{"bp": "<systolic/diastolic>", "pulse": <int 55-130>, "temp": <float 36.0-40.5>, "spo2": <int 88-100>}},
+  "correct_diagnosis_en": "<diagnosis + next steps — this field CAN be clinical, it's the answer key>",
+  "correct_diagnosis_bn": "<Bengali version>",
+  "recommended_medicines": ["<medicine 1>", "<medicine 2>"],
+  "report_type": "<one of: lab, xray, ct, ultrasound, ecg, clinical>",
+  "lab_results_en": "<relevant findings with realistic values>",
+  "lab_results_bn": "<Bengali version>"
+}}"""
+
+
+async def generate_patient(language: str = "en", category: str | None = None) -> dict[str, Any]:
     system = (
-        "You are a medical education content generator producing realistic, fictional patient "
-        "cases for training doctors in Bangladesh. You are especially careful to write patient "
-        "dialogue the way real anxious patients talk — never like a clinical chart note. Short, "
-        "clinical-sounding complaints are considered failures."
+        "You are a medical education content designer AND generator producing realistic, "
+        "fictional patient cases for training doctors in Bangladesh. You choose the clinical "
+        "scenario yourself — condition, difficulty, demographics, personality — then write "
+        "patient dialogue the way real anxious patients talk, never like a clinical chart note. "
+        "Short, clinical-sounding complaints, short/invalid complaints, scenario choices that ignore the instructions, "
+        "or picking a condition outside a requested category are all considered failures."
     )
 
+    last_violation = None
     for attempt in range(GEN_RETRIES + 1):
         temperature = GEN_TEMPERATURE if attempt == 0 else GEN_TEMPERATURE_RETRY
-        raw = await generate_text(
-            prompt,
-            system=system,
-            temperature=temperature,
-            max_tokens=GEN_MAX_TOKENS,
-        )
-        patient = _parse_generated_patient(raw)
-        if patient is not None:
-            patient = _validate_and_fill_patient(patient, age, gender)
-            if patient is not None:
-                patient["id"] = f"ai-{uuid.uuid4().hex[:8]}"
-                patient.setdefault("report_image", "")
-                return patient
+        prompt = _build_full_case_prompt(language, category)
+        if last_violation:
+            prompt += f"\n\nYour previous attempt was rejected for this specific reason: {last_violation}\nFix that specific issue and try again, still designing your own scenario within the required category."
 
-    return _fallback_patient(category, age, gender)
+        raw = await generate_text(prompt, system=system, temperature=temperature, max_tokens=GEN_MAX_TOKENS + 200)
+        patient = _parse_generated_patient(raw)
+        if patient is None:
+            last_violation = "Response was not valid JSON matching the required structure."
+            continue
+
+        complaint = patient.get("chief_complaint_en", "") or ""
+        followup = patient.get("followup_complaint_en", "") or ""
+        violation = _explain_violation(complaint) or (_explain_violation(followup) if followup else None)
+        if violation:
+            last_violation = violation
+            continue
+
+        gender = patient.get("gender_en") if patient.get("gender_en") in ("Male", "Female") else "Male"
+        age = int(patient.get("age") or 40)
+        patient = _validate_and_fill_patient(patient, age, gender)
+        if patient is not None:
+            patient["id"] = f"ai-{uuid.uuid4().hex[:8]}"
+            patient.setdefault("report_image", "")
+            condition = patient.get("condition") or patient.get("correct_diagnosis_en") or patient.get("report_type") or "unspecified"
+            patient["template_condition"] = condition
+            patient["source"] = "gemma"
+            _remember_condition(str(condition))
+            return patient
+
+    fallback_category = category if category in ILLNESS_CATEGORIES else random.choice(ILLNESS_CATEGORIES)
+    age = random.randint(20, 70)
+    gender = random.choice(["Male", "Female"])
+    fallback = _fallback_patient(fallback_category, age, gender)
+    fallback["template_condition"] = fallback_category
+    fallback["source"] = "fallback"
+    return fallback
 
 
 def _fallback_response(prompt: str) -> str:
@@ -562,7 +924,12 @@ Patient case:
 
 Doctor's spoken advice: {doctor_advice}
 Doctor's prescribed medicines: {', '.join(medicines) if medicines else 'None specified'}
+Evaluate all aspects of the consultation, especially:
+1. Clinical reasoning: Did the student identify the correct problem, interpret the case appropriately, and propose an evidence-based plan?
+2. Communication: Was the advice clear, structured, patient-centered, and easy for a non-medical patient to understand?
+3. Guideline alignment: Compare the student's assessment and plan against published guidance from NICE, ESC, AHA, ACC, or other relevant specialty guidelines.
 
+Cite at least one guideline source explicitly in the English verdict and one in the Bengali verdict. Use phrasing like "According to NICE NG125..." or "AHA/ACC guideline recommends..." in English, and equivalent Bengali citations in Bengali.
 {lang_note}
 
 Return ONLY valid JSON with this exact structure:
@@ -578,7 +945,9 @@ Return ONLY valid JSON with this exact structure:
 }}"""
 
     raw = await generate_text(prompt)
-    return _parse_json_response(raw)
+    result = _parse_json_response(raw)
+    result.setdefault("source", "gemma")
+    return result
 
 
 async def evaluate_followup(
@@ -610,7 +979,9 @@ Return ONLY valid JSON:
 }}"""
 
     raw = await generate_text(prompt)
-    return _parse_json_response(raw)
+    result = _parse_json_response(raw)
+    result.setdefault("source", "gemma")
+    return result
 
 
 def _parse_json_response(raw: str) -> dict[str, Any]:

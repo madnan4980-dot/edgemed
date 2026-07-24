@@ -36,50 +36,55 @@ AXIS_QUADRANTS = {
     "Indeterminate Axis":     {"lead_i_sign": -1, "avf_sign": -1},
 }
 AXIS_OPTIONS = list(AXIS_QUADRANTS.keys())
-AXIS_WEIGHTS = [0.55, 0.25, 0.15, 0.05]  # Normal is most common clinically
+AXIS_WEIGHTS = [0.55, 0.25, 0.15, 0.05]  # Normal is most common clinically — used only by the emergency fallback path
 
 DIFFICULTIES = ["beginner", "intermediate", "advanced"]
 
-GEN_SYSTEM = (
-    "You are a medical education content generator producing realistic, fictional "
-    "OSCE-style ECG interpretation cases for training medical students in Bangladesh. "
-    "You never claim the rendered ECG shows pathological morphology it cannot actually "
-    "show (e.g. STEMI, AFib) — the strip is a plain rate-based rhythm simulation. Any "
-    "clinical severity lives in the vignette (history, vitals, labs), not in fake ECG shape."
-)
+# Retries give Gemma real room to self-correct instead of instantly falling
+# back to hardcoded content on the first malformed/invalid response.
+GEN_RETRIES = 2
 
 
-def _build_case_prompt(rhythm: str, heart_rate: int, difficulty: str, axis: str) -> str:
-    return f"""Generate one realistic educational ECG case for a third-year medical student
-practicing an OSCE ECG interpretation station, for a doctor-training simulator in
-present-day Bangladesh.
+# ---------------- Prompt building ----------------
 
-The ECG will be rendered as a simplified 3-lead simulation (Lead II for the
-rhythm strip; Lead I and aVF for the quadrant axis method) with:
-- Rhythm: {rhythm}
-- Heart rate: {heart_rate} bpm
-- Frontal plane axis (FIXED by the simulation — do not choose your own): {axis}
+def _build_full_case_prompt(language: str = "en") -> str:
+    language_hint = "Bengali" if language == "bn" else "English"
+    return f"""Design and generate one realistic educational ECG case for a third-year
+medical student practicing an OSCE ECG interpretation station, for a doctor-training
+simulator in present-day Bangladesh. YOU choose the scenario — difficulty, rhythm,
+axis, and target heart rate — then write the clinical vignette around it.
 
-Build a clinical vignette CONSISTENT with this rhythm/rate/axis and with
-difficulty level "{difficulty}". Give the patient a believable Bangladeshi
-occupation, home situation, and social context, written in a plain, slightly
-worried voice (not a chart note) for chief_complaint_en/bn and history_en/bn.
-Where clinically appropriate you may use a supporting detail consistent with
-the axis (e.g. long-standing hypertension can support left axis deviation),
-but treat {axis} as a fixed fact, never contradict it.
+The ECG will be rendered as a simplified 3-lead simulation (Lead II for the rhythm
+strip; Lead I and aVF for the quadrant axis method) using NeuroKit2, which can only
+render RATE and QUADRANT POLARITY — not true waveform morphology. Choose:
+
+- difficulty: one of {json.dumps(DIFFICULTIES)}
+- rhythm: one of {json.dumps(RHYTHM_OPTIONS)}
+- heartRate: an integer that is VALID for the rhythm you chose:
+  {json.dumps({k: list(v) for k, v in RHYTHM_RATE_RANGES.items()})}
+- axis: one of {json.dumps(AXIS_OPTIONS)} — clinically, "Normal Axis" is by far the
+  most common; only choose a deviation if the vignette genuinely supports it (e.g.
+  long-standing hypertension/LVH can support left axis deviation).
+
+Build a clinical vignette CONSISTENT with your own choices above. Give the patient a
+believable Bangladeshi occupation, home situation, and social context, written in a
+plain, slightly worried voice (not a chart note) for chief_complaint_en/bn and
+history_en/bn, in {language_hint} as the primary language (always populate both
+*_en and *_bn fields regardless).
 
 Populate groundTruth with clinically accurate teaching content: intervals, key
-findings a student should notice, likely diagnosis, and immediate management.
-keyFindings MAY describe rate, regularity, rate-based rhythm classification, AND
-the Lead I / aVF quadrant reading (e.g. "Lead I positive, aVF negative — left
-axis deviation") since these are genuinely rendered in this simplified 3-lead
-simulation. Do NOT invent findings this simulation cannot show: no voltage
-criteria, no ST changes, no T-wave morphology, no chamber enlargement beyond what
-the vignette implies. Ground clinical "pathology" primarily in the vignette
-(history, vitals), not in fake ECG shape.
+findings, likely diagnosis, and immediate management. keyFindings MAY describe rate,
+regularity, rate-based rhythm classification, AND the Lead I / aVF quadrant reading
+(e.g. "Lead I positive, aVF negative — left axis deviation") since these are
+genuinely rendered in this simplified 3-lead simulation. Do NOT invent findings this
+simulation cannot show: no voltage criteria, no ST changes, no T-wave morphology, no
+chamber enlargement beyond what the vignette implies. Ground clinical "pathology"
+primarily in the vignette (history, vitals), not in fake ECG shape.
 
 Return ONLY valid JSON, no markdown fences, no commentary, in exactly this structure:
 {{
+  "rhythm": "<one of the rhythm options above>",
+  "difficulty": "<one of the difficulty options above>",
   "patient": {{"age": <int 18-85>, "gender_en": "Male|Female", "gender_bn": "পুরুষ or মহিলা"}},
   "chief_complaint_en": "<2-4 sentences, plain worried patient voice>",
   "chief_complaint_bn": "<Bengali version, same length/register>",
@@ -87,11 +92,12 @@ Return ONLY valid JSON, no markdown fences, no commentary, in exactly this struc
   "history_bn": "<Bengali version>",
   "vitals": {{"bp": "<systolic/diastolic>", "spo2": <int 88-100>, "temp": <float 36.0-39.5>}},
   "groundTruth": {{
-    "axis": "{axis}",
-    "intervals": "<e.g. PR 0.16s, QRS 0.08s, QT 0.38s, appropriate for this rate>",
+    "axis": "<one of the axis options above>",
+    "heartRate": <int, must be valid for the rhythm you chose>,
+    "intervals": "<e.g. PR 0.16s, QRS 0.08s, QT 0.38s, appropriate for the rate>",
     "keyFindings_en": ["<finding1, may reference rate/rhythm/axis quadrant>", "<finding2>"],
     "keyFindings_bn": ["<বাংলা finding1>", "<বাংলা finding2>"],
-    "diagnosis_en": "<likely diagnosis, consistent with {rhythm} at {heart_rate} bpm>",
+    "diagnosis_en": "<likely diagnosis, consistent with your chosen rhythm/rate>",
     "diagnosis_bn": "<Bengali version>",
     "management_en": "<immediate management>",
     "management_bn": "<Bengali version>"
@@ -140,40 +146,103 @@ Return ONLY valid JSON, no markdown fences, no commentary, in exactly this struc
 }}"""
 
 
+# ---------------- Validation ----------------
+
+def _validate_ecg_case(case) -> str | None:
+    """Returns a violation description if the case is unusable, else None.
+    This checks that Gemma's OWN choices are internally consistent and
+    renderable — it does not second-guess which rhythm/axis Gemma picked."""
+    if not isinstance(case, dict) or "groundTruth" not in case:
+        return "Response was not valid JSON matching the required structure."
+
+    rhythm = case.get("rhythm")
+    if rhythm not in RHYTHM_OPTIONS:
+        return f"rhythm must be exactly one of {RHYTHM_OPTIONS}, got '{rhythm}'."
+
+    axis = case.get("groundTruth", {}).get("axis")
+    if axis not in AXIS_OPTIONS:
+        return f"groundTruth.axis must be exactly one of {AXIS_OPTIONS}, got '{axis}'."
+
+    difficulty = case.get("difficulty")
+    if difficulty not in DIFFICULTIES:
+        return f"difficulty must be exactly one of {DIFFICULTIES}, got '{difficulty}'."
+
+    complaint = case.get("chief_complaint_en", "") or ""
+    if len(complaint.split()) < 15:
+        return "chief_complaint_en was too short — needs a real vignette, not a placeholder."
+
+    return None
+
+
 # ---------------- Case generation ----------------
 
 async def generate_ecg_case(language: str = "en") -> dict:
+    system = (
+        "You are a medical education content designer AND generator producing realistic, "
+        "fictional OSCE-style ECG interpretation cases for training medical students in "
+        "Bangladesh. You choose the scenario yourself — difficulty, rhythm, axis, and target "
+        "heart rate — then write the clinical vignette. You never claim the rendered ECG "
+        "shows pathological morphology it cannot actually show (e.g. STEMI, AFib) — the "
+        "strip is a plain rate-based rhythm simulation. Any clinical severity lives in the "
+        "vignette (history, vitals, labs), not in fake ECG shape."
+    )
+
+    last_violation = None
+    for attempt in range(GEN_RETRIES + 1):
+        prompt = _build_full_case_prompt(language)
+        if last_violation:
+            prompt += (
+                f"\n\nYour previous attempt was rejected for this specific reason: "
+                f"{last_violation}\nFix that specific issue and try again, still "
+                f"designing your own scenario."
+            )
+
+        raw = await generate_text(prompt, system=system, temperature=0.7, max_tokens=1000)
+        case = _parse_json_response(raw)
+
+        violation = _validate_ecg_case(case)
+        if violation:
+            last_violation = violation
+            continue
+
+        rhythm = case["rhythm"]
+        axis = case["groundTruth"]["axis"]
+        lo, hi = RHYTHM_RATE_RANGES[rhythm]
+        # Gemma's chosen rate is respected as long as it's physiologically valid
+        # for its own chosen rhythm — this is a rendering constraint (NeuroKit2
+        # needs a rate in range to actually render that rhythm), not a narrative
+        # override. Only clamp if Gemma's own numbers are inconsistent.
+        heart_rate = case["groundTruth"].get("heartRate")
+        if not isinstance(heart_rate, int) or not (lo <= heart_rate <= hi):
+            heart_rate = random.randint(lo, hi)
+
+        case["groundTruth"]["heartRate"] = heart_rate
+        case.setdefault("vitals", {})["heartRate"] = heart_rate
+        case["ecg_image"] = generate_ecg_image(heart_rate, rhythm, axis)
+        case["case_id"] = str(uuid.uuid4())
+        case["source"] = "gemma"
+        return case
+
+    # Total generation failure across all retries — last resort only.
     difficulty = random.choice(DIFFICULTIES)
     rhythm = random.choice(RHYTHM_OPTIONS)
     lo, hi = RHYTHM_RATE_RANGES[rhythm]
     heart_rate = random.randint(lo, hi)
     axis = random.choices(AXIS_OPTIONS, weights=AXIS_WEIGHTS)[0]
 
-    prompt = _build_case_prompt(rhythm, heart_rate, difficulty, axis)
-    raw = await generate_text(prompt, system=GEN_SYSTEM, temperature=0.7, max_tokens=900)
-    case = _parse_json_response(raw)
-
-    if not isinstance(case, dict) or "groundTruth" not in case:
-        case = _fallback_ecg_case(rhythm, heart_rate, difficulty, axis)
-
-    # Clamp/repair server-side so rendered leads and vignette always match
-    # the claimed rhythm/axis, even if the model drifts. Axis in particular
-    # is server-authoritative — it's determined by how we render Lead I/aVF,
-    # not by anything the model decides.
+    case = _fallback_ecg_case(rhythm, heart_rate, difficulty, axis)
     case["rhythm"] = rhythm
     case["difficulty"] = difficulty
-    case.setdefault("groundTruth", {})["heartRate"] = heart_rate
-    case["groundTruth"]["rhythm"] = rhythm
-    case["groundTruth"]["axis"] = axis
+    case["groundTruth"]["heartRate"] = heart_rate
     case.setdefault("vitals", {})["heartRate"] = heart_rate
-
     case["ecg_image"] = generate_ecg_image(heart_rate, rhythm, axis)
     case["case_id"] = str(uuid.uuid4())
+    case["source"] = "fallback"
     return case
 
 
 def _fallback_ecg_case(rhythm: str, heart_rate: int, difficulty: str, axis: str) -> dict:
-    """Used only if AI generation fails or returns malformed JSON."""
+    """Used only if AI generation fails validation across all retries."""
     return {
         "patient": {"age": 58, "gender_en": "Male", "gender_bn": "পুরুষ"},
         "chief_complaint_en": "Doctor, I've been feeling my heart race and I feel a bit dizzy.",
@@ -185,7 +254,11 @@ def _fallback_ecg_case(rhythm: str, heart_rate: int, difficulty: str, axis: str)
         "groundTruth": {
             "axis": axis,
             "intervals": "PR 0.16s, QRS 0.08s, QT 0.36s",
-            "keyFindings_en": [f"Regular rhythm at {heart_rate} bpm", f"Consistent with {rhythm}", f"Lead I/aVF pattern consistent with {axis.lower()}"],
+            "keyFindings_en": [
+                f"Regular rhythm at {heart_rate} bpm",
+                f"Consistent with {rhythm}",
+                f"Lead I/aVF pattern consistent with {axis.lower()}",
+            ],
             "keyFindings_bn": [f"নিয়মিত ছন্দ {heart_rate} bpm", f"{rhythm}-এর সাথে সামঞ্জস্যপূর্ণ"],
             "diagnosis_en": rhythm,
             "diagnosis_bn": rhythm,
@@ -288,4 +361,8 @@ async def evaluate_ecg_interpretation(case: dict, answers: dict, language: str =
             "differentialDiagnosis": [],
             "vivaQuestion": "",
         }
+        result["source"] = "fallback"
+    else:
+        result["source"] = "gemma"
+
     return result

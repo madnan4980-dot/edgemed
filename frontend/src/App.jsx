@@ -6,17 +6,38 @@ import {
   fetchTTS,
   checkHealth,
   reportUrl,
+  orderTest,
+  chatWithPatient,
 } from './api'
 import { t } from './i18n'
 import docBg from './doc.jpg'
 import Avatar from 'avataaars'
-import { getPatientAvatarProps } from './patientAvatar'
+import { getPatientAvatarProps, getPatientGenderInfo } from './patientAvatar'
 import ReportLab from './ReportLab'
 import PrescriptionLab from './PrescriptionLab'
 import EcgDemo from './EcgDemo'
+import PatientDashboard from './PatientDashboard'
 
 function useSpeech(lang) {
   const recognitionRef = useRef(null)
+  const audioRef = useRef(null)
+  const synthUtteranceRef = useRef(null)
+  const [isPaused, setIsPaused] = useState(false)
+
+  const stopSpeech = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+      audioRef.current = null
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel()
+    }
+
+    synthUtteranceRef.current = null
+    setIsPaused(false)
+  }, [])
 
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -31,18 +52,65 @@ function useSpeech(lang) {
       if (recognitionRef.current) {
         recognitionRef.current.stop()
       }
+      stopSpeech()
     }
-  }, [lang])
+  }, [lang, stopSpeech])
+
+  const pauseSpeech = useCallback(() => {
+    if (audioRef.current && !audioRef.current.paused) {
+      audioRef.current.pause()
+      setIsPaused(true)
+      return true
+    }
+
+    if ('speechSynthesis' in window && synthUtteranceRef.current) {
+      window.speechSynthesis.pause()
+      setIsPaused(true)
+      return true
+    }
+
+    return false
+  }, [])
+
+  const resumeSpeech = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {})
+      setIsPaused(false)
+      return true
+    }
+
+    if ('speechSynthesis' in window && synthUtteranceRef.current) {
+      window.speechSynthesis.resume()
+      setIsPaused(false)
+      return true
+    }
+
+    return false
+  }, [])
 
   const speak = useCallback(async (text, language, gender) => {
+    stopSpeech()
     const result = await fetchTTS(text, language, gender)
 
     if (result.source === 'azure' && result.audio_base64) {
       return new Promise((resolve, reject) => {
         const audio = new Audio(`data:${result.mime_type || 'audio/mpeg'};base64,${result.audio_base64}`)
-        audio.onended = () => resolve({ source: 'azure', voice: result.voice })
-        audio.onerror = () => reject(new Error('Failed to play Azure audio'))
-        audio.play().catch(reject)
+        audioRef.current = audio
+        audio.onended = () => {
+          audioRef.current = null
+          setIsPaused(false)
+          resolve({ source: 'azure', voice: result.voice })
+        }
+        audio.onerror = () => {
+          audioRef.current = null
+          setIsPaused(false)
+          reject(new Error('Failed to play Azure audio'))
+        }
+        audio.play().catch((error) => {
+          audioRef.current = null
+          setIsPaused(false)
+          reject(error)
+        })
       })
     }
 
@@ -61,21 +129,41 @@ function useSpeech(lang) {
         utter.lang = 'en-US'
         utter.rate = 0.92
         const voices = window.speechSynthesis.getVoices()
-        const genderTag = gender?.trim().toLowerCase() === 'male' ? 'male' : 'female'
+        const { isMale } = getPatientGenderInfo({ gender_en: gender })
+        const voiceScore = (voice) => {
+          const name = (voice.name || '').toLowerCase()
+          if (isMale) {
+            if (name.includes('male')) return 3
+            if (name.includes('david') || name.includes('mark') || name.includes('james') || name.includes('daniel')) return 2
+            return 0
+          }
+          if (name.includes('female')) return 3
+          if (name.includes('zira') || name.includes('susan') || name.includes('jenny') || name.includes('victoria') || name.includes('hazel')) return 2
+          return 0
+        }
         const enVoice =
-          voices.find((v) => v.lang.startsWith('en') && v.name?.toLowerCase().includes(genderTag)) ||
+          [...voices.filter((v) => v.lang.startsWith('en'))].sort((a, b) => voiceScore(b) - voiceScore(a))[0] ||
           voices.find((v) => v.lang.startsWith('en'))
         if (enVoice) utter.voice = enVoice
-        utter.onend = () => resolve({ source: 'browser' })
-        utter.onerror = () => resolve({ source: 'browser' })
+        utter.onend = () => {
+          synthUtteranceRef.current = null
+          setIsPaused(false)
+          resolve({ source: 'browser' })
+        }
+        utter.onerror = () => {
+          synthUtteranceRef.current = null
+          setIsPaused(false)
+          resolve({ source: 'browser' })
+        }
+        synthUtteranceRef.current = utter
         window.speechSynthesis.speak(utter)
       })
     }
 
     throw new Error(result.error || 'No TTS available')
-  }, [])
+  }, [stopSpeech])
 
-  const startListening = useCallback((onResult) => {
+  const startListening = useCallback((onResult, onStop) => {
     const rec = recognitionRef.current
     if (!rec) return false
 
@@ -95,18 +183,37 @@ function useSpeech(lang) {
       onResult(finalTranscript + interim)
     }
 
-    rec.onerror = () => {}
-    rec.start()
+    rec.onerror = (event) => {
+      console.error('Speech recognition error', event.error)
+      onStop?.()
+    }
+
+    rec.onend = () => {
+      onStop?.()
+    }
+
+    try {
+      rec.start()
+    } catch (error) {
+      console.error('Speech recognition start failed', error)
+      onStop?.()
+      return false
+    }
+
     return true
   }, [lang])
 
   const stopListening = useCallback(() => {
     if (recognitionRef.current) {
-      recognitionRef.current.stop()
+      try {
+        recognitionRef.current.stop()
+      } catch (error) {
+        console.error('Speech recognition stop failed', error)
+      }
     }
   }, [])
 
-  return { speak, startListening, stopListening }
+  return { speak, startListening, stopListening, pauseSpeech, resumeSpeech, stopSpeech, isPaused }
 }
 
 function ScoreRing({ score }) {
@@ -179,10 +286,62 @@ function StartScreen({ onStart, onReportAnalysis, onPrescriptionLab, onEcgDemo, 
   )
 }
 
+export const PATIENT_CATEGORIES = [
+  { id: 'cardiac', icon: '❤️', label_en: 'Chest Pain / Heart', label_bn: 'বুকে ব্যথা / হৃদরোগ' },
+  { id: 'respiratory', icon: '🫁', label_en: 'Cough / Breathing', label_bn: 'কাশি / শ্বাসকষ্ট' },
+  { id: 'gastrointestinal', icon: '🤢', label_en: 'Stomach Ache', label_bn: 'পেট ব্যথা' },
+  { id: 'infectious', icon: '🤒', label_en: 'Fever / Infection', label_bn: 'জ্বর / সংক্রমণ' },
+  { id: 'endocrine', icon: '💧', label_en: 'Thirst / Fatigue', label_bn: 'তেষ্টা / দুর্বলতা' },
+  { id: 'neurologic', icon: '🧠', label_en: 'Headache / Dizziness', label_bn: 'মাথাব্যথা / মাথা ঘোরা' },
+]
+
+function CategorySelect({ lang, loading, onSelect, onBack }) {
+  return (
+    <div className="start-screen">
+      <div className="start-card" style={{ maxWidth: 640 }}>
+        <h1>{lang === 'bn' ? 'কেস বেছে নিন' : 'Choose a Case'}</h1>
+        <p>
+          {lang === 'bn'
+            ? 'কোন ধরনের রোগীর সমস্যা নিয়ে অনুশীলন করতে চান?'
+            : 'What kind of patient complaint do you want to practice?'}
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.9rem', marginTop: '1.5rem' }}>
+          {PATIENT_CATEGORIES.map((c) => (
+            <button
+              key={c.id}
+              className="start-btn"
+              onClick={() => onSelect(c.id)}
+              disabled={loading}
+              style={{ textAlign: 'left' }}
+            >
+              <span style={{ marginRight: '0.5rem' }}>{c.icon}</span>
+              {lang === 'bn' ? c.label_bn : c.label_en}
+            </button>
+          ))}
+          <button
+            className="start-btn"
+            onClick={() => onSelect(null)}
+            disabled={loading}
+            style={{ gridColumn: '1 / -1' }}
+          >
+            {loading
+              ? (lang === 'bn' ? 'রোগী তৈরি হচ্ছে...' : 'Generating patient...')
+              : (lang === 'bn' ? '🎲 যেকোনো কেস' : '🎲 Surprise me')}
+          </button>
+        </div>
+        <button className="rx-back-btn" style={{ marginTop: '1.5rem' }} onClick={onBack}>
+          {lang === 'bn' ? 'ফিরে যান' : 'Back'}
+        </button>
+      </div>
+    </div>
+  )
+}
+
 function getScreenFromPath(pathname = window.location.pathname) {
   if (pathname.startsWith('/report-analysis')) return 'report'
   if (pathname.startsWith('/prescription-lab')) return 'prescription'
   if (pathname.startsWith('/ecg-demo')) return 'ecg'
+  if (pathname.startsWith('/select-category')) return 'category'
   if (pathname.startsWith('/simulation') || pathname.startsWith('/checkup')) return 'simulation'
   return 'start'
 }
@@ -195,6 +354,8 @@ function getPathForScreen(screen) {
       return '/prescription-lab'
     case 'ecg':
       return '/ecg-demo'
+    case 'category':
+      return '/select-category'
     case 'simulation':
       return '/simulation'
     default:
@@ -215,12 +376,24 @@ function App() {
   const [speaking, setSpeaking] = useState(false)
   const [health, setHealth] = useState(null)
   const [speechError, setSpeechError] = useState(null)
+  const [dashboardOpen, setDashboardOpen] = useState(false)
+  const [dashboardTab, setDashboardTab] = useState('overview')
+  const [testResult, setTestResult] = useState(null)
+  const [orderingTest, setOrderingTest] = useState(false)
+  const [orderError, setOrderError] = useState(null)
+  const [chatMessages, setChatMessages] = useState([])
+  const [chatLoading, setChatLoading] = useState(false)
+  const [chatError, setChatError] = useState(null)
   const patient = session?.patient
-  const { speak, startListening, stopListening } = useSpeech(lang)
+  const { speak, startListening, stopListening, pauseSpeech, resumeSpeech, stopSpeech, isPaused } = useSpeech(lang)
   const patientSpokenRef = useRef(null)
   const startingRef = useRef(false)
 
   const navigateToScreen = useCallback((nextScreen, options = {}) => {
+    if (screen !== nextScreen) {
+      stopSpeech()
+    }
+
     const nextPath = getPathForScreen(nextScreen)
     const method = options.replace ? 'replaceState' : 'pushState'
 
@@ -229,7 +402,7 @@ function App() {
     }
 
     setScreen(nextScreen)
-  }, [])
+  }, [screen, stopSpeech])
 
   useEffect(() => {
     const handlePopState = () => {
@@ -243,6 +416,12 @@ function App() {
   useEffect(() => {
     checkHealth().then(setHealth).catch(() => {})
   }, [])
+
+  useEffect(() => {
+    return () => {
+      stopSpeech()
+    }
+  }, [stopSpeech])
 
   useEffect(() => {
     if (!patient) return
@@ -266,7 +445,7 @@ function App() {
     speakComplaint()
   }, [patient, lang, speak])
 
-  const handleStart = async (language) => {
+  const handleStart = async (language, category = null) => {
     if (startingRef.current) return
     startingRef.current = true
 
@@ -274,12 +453,16 @@ function App() {
     setLoading(true)
     patientSpokenRef.current = null
     try {
-      const data = await startSession(language)
+      const data = await startSession(language, category)
       setSession(data)
       navigateToScreen('simulation')
       setEvaluation(null)
       setAdvice('')
       setMedicines([])
+      setDashboardOpen(false)
+      setDashboardTab('overview')
+      setTestResult(null)
+      setChatMessages([])
     } catch (e) {
       console.error('Failed to start session', e)
       alert(`Failed to start session. ${e?.message || 'Check that the backend is running on port 8000.'}`)
@@ -309,6 +492,37 @@ function App() {
     }
   }
 
+  const openDashboard = () => setDashboardOpen(true)
+  const closeDashboard = () => setDashboardOpen(false)
+  const handleOrderTest = async (testName) => {
+    if (!session?.session_id) return
+    setOrderingTest(true)
+    setOrderError(null)
+    try {
+      const result = await orderTest(session.session_id, testName)
+      setTestResult(result)
+    } catch (error) {
+      setOrderError(error?.message || 'Failed to order test')
+    } finally {
+      setOrderingTest(false)
+    }
+  }
+
+  const handleChat = async (message) => {
+    if (!session?.session_id) return
+    const nextHistory = [...chatMessages, { role: 'doctor', content: message }]
+    setChatLoading(true)
+    setChatError(null)
+    try {
+      const result = await chatWithPatient(session.session_id, message, nextHistory)
+      setChatMessages([...nextHistory, { role: 'patient', content: result.reply }])
+    } catch (error) {
+      setChatError(error?.message || 'Failed to chat with patient')
+    } finally {
+      setChatLoading(false)
+    }
+  }
+
   const isFollowup = patient?.visit_type === 'followup'
 
   const handleListen = async () => {
@@ -325,14 +539,20 @@ function App() {
   }
 
   const toggleRecording = () => {
+    console.log('toggleRecording called, recording=', recording)
     if (recording) {
       setRecording(false)
       stopListening()
       return
     }
 
+    setSpeechError(null)
     setRecording(true)
-    const started = startListening((text) => setAdvice(text))
+    const started = startListening(
+      (text) => setAdvice(text),
+      () => setRecording(false)
+    )
+    console.log('startListening returned', started)
     if (!started) {
       setRecording(false)
       setSpeechError('Speech recognition unavailable.')
@@ -372,7 +592,7 @@ function App() {
   if (screen === 'start') {
     return (
       <StartScreen
-        onStart={handleStart}
+        onStart={() => navigateToScreen('category')}
         onReportAnalysis={handleReportAnalysis}
         onPrescriptionLab={() => navigateToScreen('prescription')}
         onEcgDemo={handleEcgDemo}
@@ -384,6 +604,16 @@ function App() {
     )
   }
 
+  if (screen === 'category') {
+    return (
+      <CategorySelect
+        lang={lang}
+        loading={loading}
+        onSelect={(category) => handleStart(lang, category)}
+        onBack={() => navigateToScreen('start', { replace: true })}
+      />
+    )
+  }
   if (screen === 'report') {
     return <ReportLab lang={lang} onBack={handleBackToStart} />
   }
@@ -529,9 +759,32 @@ function App() {
 
           <div className="speech-note">
             {speaking
-              ? (lang === 'bn' ? 'রোগী বলেন...' : 'Patient is speaking...')
+              ? (isPaused
+                ? (lang === 'bn' ? 'প্লেব্যাক থেমে আছে।' : 'Playback paused.')
+                : (lang === 'bn' ? 'রোগী বলেন...' : 'Patient is speaking...'))
               : (lang === 'bn' ? 'রোগীর সমস্যাগুলো শোনা হচ্ছে।' : 'Patient is describing their issue.')}
           </div>
+
+          {patient && (
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '0.75rem' }}>
+              <button
+                className="mic-btn"
+                onClick={isPaused ? resumeSpeech : pauseSpeech}
+                disabled={!patient || loading || (!speaking && !isPaused)}
+                style={{ padding: '0.6rem 1rem', width: 'auto' }}
+              >
+                {isPaused ? (lang === 'bn' ? '▶ চালিয়ে যান' : '▶ Resume') : (lang === 'bn' ? '⏸ থামুন' : '⏸ Pause')}
+              </button>
+              <button
+                className="mic-btn"
+                onClick={openDashboard}
+                disabled={!patient || loading}
+                style={{ padding: '0.6rem 1rem', width: 'auto' }}
+              >
+                {lang === 'bn' ? 'রোগী অন্বেষণ' : 'Explore Patient'}
+              </button>
+            </div>
+          )}
 
           {speechError && (
             <p style={{ marginTop: '0.75rem', fontSize: '0.8rem', color: '#f87171', textAlign: 'center', maxWidth: 360 }}>
@@ -539,6 +792,25 @@ function App() {
             </p>
           )}
         </div>
+
+        {dashboardOpen && patient && (
+          <PatientDashboard
+            patient={patient}
+            session={session}
+            lang={lang}
+            tab={dashboardTab}
+            onTabChange={setDashboardTab}
+            onClose={closeDashboard}
+            onOrderTest={handleOrderTest}
+            testResult={testResult}
+            orderingTest={orderingTest}
+            orderError={orderError}
+            chatMessages={chatMessages}
+            onChat={handleChat}
+            chatLoading={chatLoading}
+            chatError={chatError}
+          />
+        )}
 
         {/* Right — Doctor Input */}
         <div className="panel doctor-panel">

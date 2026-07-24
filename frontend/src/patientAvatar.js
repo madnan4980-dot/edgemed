@@ -31,6 +31,24 @@ function pick(rng, arr) {
   return arr[Math.floor(rng() * arr.length)]
 }
 
+export function getPatientGenderInfo(patient) {
+  const raw = String(patient?.gender_en || patient?.gender || patient?.gender_bn || '')
+    .trim()
+    .toLowerCase()
+
+  if (raw.startsWith('f') || raw === 'মহিলা') {
+    return { isMale: false, label: 'Female' }
+  }
+  if (raw.startsWith('m') || raw === 'পুরুষ') {
+    return { isMale: true, label: 'Male' }
+  }
+
+  // Gemma should be the single source of truth for gender. If the field is
+  // missing or malformed, fall back to Male by default (consistent with
+  // previous behaviour being conservative). No name-based guessing.
+  return { isMale: true, label: 'Male' }
+}
+
 export function getPatientAvatarProps(patient) {
   if (!patient) return null
 
@@ -39,7 +57,7 @@ export function getPatientAvatarProps(patient) {
   )
   const rng = mulberry32(hashString(seedKey))
 
-  const isMale = patient.gender_en === 'Male'
+  const { isMale } = getPatientGenderInfo(patient)
   const elderly = (patient.age ?? 0) > 60
 
   return {

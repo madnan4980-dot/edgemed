@@ -36,9 +36,29 @@ export async function evaluateConsultation(sessionId, advice, medicines) {
   const res = await fetch(`${API_BASE}/api/consultation/evaluate`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ advice, medicines }),
+    body: JSON.stringify({ session_id: sessionId, doctor_advice: advice, medicines }),
   })
   if (!res.ok) throw new Error('Failed to evaluate consultation')
+  return res.json()
+}
+
+export async function orderTest(sessionId, testName) {
+  const res = await fetch(`${API_BASE}/api/consultation/order-test`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ session_id: sessionId, test_name: testName }),
+  })
+  if (!res.ok) throw new Error('Failed to order test')
+  return res.json()
+}
+
+export async function chatWithPatient(sessionId, message, history) {
+  const res = await fetch(`${API_BASE}/api/consultation/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ session_id: sessionId, message, history }),
+  })
+  if (!res.ok) throw new Error('Failed to chat with patient')
   return res.json()
 }
 
@@ -102,30 +122,56 @@ export async function evaluatePrescription({ caseId, diagnosis, plan, medicines 
 
 // ---------------- Interactive Tutoring ----------------
 
-export async function startInteractiveTutoring({ caseId, findings, diagnosis, differentials, management, imagePath }) {
+async function loadImageAsBase64(imagePath) {
+  if (!imagePath) {
+    throw new Error('No image path provided')
+  }
+
+  const imageUrl = imagePath.startsWith('http') ? imagePath : `${API_BASE}/reports/${imagePath}`
+  const res = await fetch(imageUrl)
+  if (!res.ok) throw new Error('Failed to load X-ray image')
+
+  const blob = await res.blob()
+  const arrayBuffer = await blob.arrayBuffer()
+  const bytes = new Uint8Array(arrayBuffer)
+  let binary = ''
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte)
+  })
+
+  return {
+    image_base64: btoa(binary),
+    image_mime: blob.type || (imagePath.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg'),
+  }
+}
+
+export async function startInteractiveTutoring({ caseId, findings, imagePath }) {
+  const imageData = await loadImageAsBase64(imagePath)
   const res = await fetch(`${API_BASE}/api/report-lab/interactive/start`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       case_id: caseId,
-      findings,
-      diagnosis,
-      differentials,
-      management,
-      image_path: imagePath,
+      student_findings: findings,
+      image_base64: imageData.image_base64,
+      image_mime: imageData.image_mime,
     }),
   })
   if (!res.ok) throw new Error('Failed to start interactive tutoring')
   return res.json()
 }
 
-export async function continueInteractiveTutoring(conversationId, studentResponse) {
+export async function continueInteractiveTutoring(conversationId, studentResponse, { caseId, imagePath } = {}) {
+  const imageData = await loadImageAsBase64(imagePath)
   const res = await fetch(`${API_BASE}/api/report-lab/interactive/continue`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      conversation_id: conversationId,
-      student_response: studentResponse,
+      case_id: caseId,
+      conversationId,
+      studentResponse,
+      image_base64: imageData.image_base64,
+      image_mime: imageData.image_mime,
     }),
   })
   if (!res.ok) throw new Error('Failed to continue interactive tutoring')

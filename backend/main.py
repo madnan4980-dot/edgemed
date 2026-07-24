@@ -7,8 +7,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+import mimetypes
+mimetypes.add_type("image/svg+xml", ".svg")
 
-from services.ai_service import evaluate_consultation, evaluate_followup
+from services.ai_service import evaluate_consultation, evaluate_followup, order_test, patient_chat_reply
 from services.patient_service import session_manager
 from services.speech_service import (
     audio_to_base64,
@@ -37,6 +39,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 REPORTS_DIR = Path(__file__).parent / "data" / "report_images"
@@ -50,6 +53,7 @@ app.mount("/ecg-images", StaticFiles(directory=str(ECG_IMAGES_DIR)), name="ecg-i
 
 class StartSessionRequest(BaseModel):
     language: str = "en"
+    category: str | None = None
 
 
 class LanguageRequest(BaseModel):
@@ -57,14 +61,49 @@ class LanguageRequest(BaseModel):
 
 
 class ConsultationRequest(BaseModel):
-    session_id: str
-    doctor_advice: str
+    session_id: str | None = Field(default=None)
+    sessionId: str | None = Field(default=None)
+    doctor_advice: str | None = Field(default=None)
+    doctorAdvice: str | None = Field(default=None)
     medicines: list[str] = Field(default_factory=list)
+
+    def resolved_session_id(self) -> str | None:
+        return self.session_id or self.sessionId
+
+    def resolved_doctor_advice(self) -> str | None:
+        return self.doctor_advice or self.doctorAdvice
 
 
 class FollowupRequest(BaseModel):
-    session_id: str
+    session_id: str | None = Field(default=None)
+    sessionId: str | None = Field(default=None)
     doctor_report_review: str
+
+    def resolved_session_id(self) -> str | None:
+        return self.session_id or self.sessionId
+
+
+class OrderTestRequest(BaseModel):
+    session_id: str | None = Field(default=None)
+    sessionId: str | None = Field(default=None)
+    test_name: str | None = Field(default=None)
+    testName: str | None = Field(default=None)
+
+    def resolved_session_id(self) -> str | None:
+        return self.session_id or self.sessionId
+
+    def resolved_test_name(self) -> str | None:
+        return self.test_name or self.testName
+
+
+class ChatRequest(BaseModel):
+    session_id: str | None = Field(default=None)
+    sessionId: str | None = Field(default=None)
+    message: str
+    history: list[dict] = Field(default_factory=list)
+
+    def resolved_session_id(self) -> str | None:
+        return self.session_id or self.sessionId
 
 
 class TTSRequest(BaseModel):
@@ -97,7 +136,7 @@ async def speech_voices():
 @app.post("/api/session/start")
 async def start_session(req: StartSessionRequest):
     try:
-        state = await session_manager.create_session(language=req.language)
+        state = await session_manager.create_session(language=req.language, category=req.category)
         return state
     except Exception as exc:
         import logging
@@ -165,8 +204,12 @@ async def speech_to_text(language: str = "en", audio: UploadFile = File(...)):
 
 @app.post("/api/consultation/evaluate")
 async def evaluate_doctor_consultation(req: ConsultationRequest):
+    session_id = req.resolved_session_id()
+    if not session_id:
+        raise HTTPException(422, "session_id is required")
+
     try:
-        state = session_manager.get_state(req.session_id)
+        state = session_manager.get_state(session_id)
     except KeyError:
         raise HTTPException(404, "Session not found")
 
@@ -174,36 +217,62 @@ async def evaluate_doctor_consultation(req: ConsultationRequest):
     if not patient:
         raise HTTPException(400, "No active patient")
 
-    full_patient = session_manager.get_full_patient(req.session_id)
+    full_patient = session_manager.get_full_patient(session_id)
     if not full_patient:
         raise HTTPException(404, "Patient data not found")
 
     language = state.get("language", "en")
 
     if state["visit_type"] == "followup":
-        ctx = session_manager.get_followup_context(req.session_id) or {}
+        ctx = session_manager.get_followup_context(session_id) or {}
         evaluation = await evaluate_followup(
             full_patient,
             ctx.get("previous_advice", ""),
-            req.doctor_advice,
+            req.resolved_doctor_advice() or "",
             language,
         )
     else:
         evaluation = await evaluate_consultation(
             full_patient,
-            req.doctor_advice,
+            req.resolved_doctor_advice() or "",
             req.medicines,
             language,
         )
 
     new_state = await session_manager.record_consultation(
-        req.session_id,
-        req.doctor_advice,
+        session_id,
+        req.resolved_doctor_advice() or "",
         req.medicines,
         evaluation,
     )
 
     return {"evaluation": evaluation, "session": new_state}
+
+
+@app.post("/api/consultation/order-test")
+async def order_test_route(req: OrderTestRequest):
+    try:
+        state = session_manager.get_state(req.session_id)
+    except KeyError:
+        raise HTTPException(404, "Session not found")
+    patient = session_manager.get_full_patient(req.session_id)
+    if not patient:
+        raise HTTPException(404, "Patient data not found")
+    result = await order_test(patient, req.test_name, state.get("language", "en"))
+    return result
+
+
+@app.post("/api/consultation/chat")
+async def chat_route(req: ChatRequest):
+    try:
+        state = session_manager.get_state(req.session_id)
+    except KeyError:
+        raise HTTPException(404, "Session not found")
+    patient = session_manager.get_full_patient(req.session_id)
+    if not patient:
+        raise HTTPException(404, "Patient data not found")
+    reply = await patient_chat_reply(patient, req.history, req.message, state.get("language", "en"))
+    return {"reply": reply}
 
 
 @app.get("/api/reports/{filename}")

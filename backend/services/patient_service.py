@@ -11,12 +11,13 @@ class SessionManager:
     def __init__(self) -> None:
         self.sessions: dict[str, dict[str, Any]] = {}
 
-    async def create_session(self, language: str = "en") -> dict[str, Any]:
+    async def create_session(self, language: str = "en", category: str | None = None) -> dict[str, Any]:
         session_id = str(uuid.uuid4())
 
         self.sessions[session_id] = {
             "id": session_id,
             "language": language,
+            "category": category,
             "consultation_count": 0,
             "current_patient": None,
             "current_visit_type": None,
@@ -37,6 +38,7 @@ class SessionManager:
         return {
             "session_id": session_id,
             "language": session["language"],
+            "category": session.get("category"),
             "consultation_count": session["consultation_count"],
             "visit_type": session.get("current_visit_type", "initial"),
             "patient": self._public_patient(patient, session.get("current_visit_type")),
@@ -62,7 +64,7 @@ class SessionManager:
         if existing is not None and not existing.done():
             return
 
-        task = asyncio.create_task(generate_patient(session["language"]))
+        task = asyncio.create_task(generate_patient(session["language"], session.get("category")))
         task.add_done_callback(self._log_prefetch_errors)
         session["_next_patient_task"] = task
 
@@ -112,8 +114,7 @@ class SessionManager:
                 "return_after": session["consultation_count"] + FOLLOWUP_AFTER,
             })
 
-        await self._advance_patient(session_id)
-        self._start_prefetch(session_id)
+        session["current_visit_type"] = visit_type
         return self.get_state(session_id)
 
     async def _advance_patient(self, session_id: str) -> None:
@@ -143,9 +144,9 @@ class SessionManager:
             try:
                 session["current_patient"] = await task
             except Exception:
-                session["current_patient"] = await generate_patient(session["language"])
+                session["current_patient"] = await generate_patient(session["language"], session.get("category"))
         else:
-            session["current_patient"] = await generate_patient(session["language"])
+            session["current_patient"] = await generate_patient(session["language"], session.get("category"))
 
         session["current_visit_type"] = "initial"
         session["_next_patient_task"] = None

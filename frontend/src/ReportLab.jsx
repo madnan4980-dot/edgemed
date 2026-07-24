@@ -177,16 +177,15 @@ export default function ReportLab({ lang = 'en', onBack }) {
       const result = await startInteractiveTutoring({
         caseId: caseData.case_id,
         findings,
-        diagnosis,
-        differentials,
-        management,
         imagePath: caseData.image,
       })
-      setConversationId(result.conversation_id)
-      setTutorResponse(result.response || result.next_question || '')
+      const nextConversationId = result.conversationId || result.conversation_id
+      const tutorMessage = result.tutorMessage || result.response || result.next_question || ''
+      setConversationId(nextConversationId)
+      setTutorResponse(tutorMessage)
       setConversation([
         { role: 'student', content: findings },
-        { role: 'tutor', content: result.response || result.next_question || '' },
+        { role: 'tutor', content: tutorMessage },
       ])
       setEvaluation({ isInteractive: true })
     } catch (e) {
@@ -199,12 +198,16 @@ export default function ReportLab({ lang = 'en', onBack }) {
     if (!conversationId || !studentResponse.trim()) return
     setIsAnswering(true)
     try {
-      const result = await continueInteractiveTutoring(conversationId, studentResponse)
-      setTutorResponse(result.response || result.next_question || '')
+      const result = await continueInteractiveTutoring(conversationId, studentResponse, {
+        caseId: caseData?.case_id,
+        imagePath: caseData?.image,
+      })
+      const tutorMessage = result.tutorMessage || result.response || result.next_question || ''
+      setTutorResponse(tutorMessage)
       setConversation((prev) => [
         ...prev,
         { role: 'student', content: studentResponse },
-        { role: 'tutor', content: result.response || result.next_question || '' },
+        { role: 'tutor', content: tutorMessage },
       ])
       setStudentResponse('')
     } catch (e) {
